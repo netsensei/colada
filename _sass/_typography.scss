@@ -1,0 +1,73 @@
+/**
+ * Typography
+ */
+
+// Baseline
+
+@include establish-baseline;
+
+$base-font-family: "Helvetica Neue", Helvetica, sans-serif;
+
+$h1-font-size : 2 * $base-font-size !default;
+$h2-font-size : 1.75 * $base-font-size !default;
+$h3-font-size : 1.25 * $base-font-size !default;
+$h4-font-size : 1 * $base-font-size !default;
+
+
+// 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+//    http://clagnut.com/blog/348/#c790
+// 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+//    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+html {
+  font-size: 100% * ($base-font-size / 16px); /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -ms-text-size-adjust: 100%; /* 2 */
+}
+
+// Addresses font-family inconsistency between 'textarea' and other form elements.
+html,
+button,
+input,
+select,
+textarea {
+  color: #333;
+  font-family: $base-font-family;
+}
+
+/* Line-heights */
+body {
+  @include adjust-font-size-to($base-font-size);
+}
+
+h1 {
+  @include adjust-font-size-to($h1-font-size);
+}
+
+h2 {
+  @include adjust-font-size-to($h2-font-size);
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  @include adjust-font-size-to($h3-font-size);
+}
+
+h4 {
+  @include adjust-font-size-to($h4-font-size);
+}
+
+/* Fonts */
+
+h1 {
+  font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* colors */
+
+a {
+  @include link-colors(#00c, #0cc, #c0c, #ccc, #cc0);
+  text-decoration: none;
+}
+
+

@@ -1,0 +1,65 @@
+/**
+ * @file
+ *   Colors, margins, paddings,...
+ */
+
+body {
+  background: #fff;
+}
+
+sidebar {
+  background: #ecebe6;
+
+  a {
+    @include link-colors(#666, #111c29, #666, #666);
+    text-decoration: none;
+  }
+
+  .avatar {
+    border-radius: 50%;
+    opacity: .8;
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    -o-transition: all 500ms ease-in;
+  }
+
+  .avatar:hover {
+    opacity: .95;
+  }
+
+  .site-title {
+    @include rhythm(0.125, 0, 0, 0.125);
+    font-size: rhythm(1.5);
+    font-weight: 600;
+  }
+
+  .site-slogan {
+    @include rhythm(0);
+    font-size: rhythm(0.75);
+    font-weight: 300;
+
+    span {
+      display: block;
+      font-size: rhythm(0.625);
+      color: #777;
+    }
+  }
+}
+
+article {
+
+  &.format-excerpt {
+    @include rhythm(1, 0, 0, 1.5);
+  }
+
+  .entry-meta {
+    color: #999;
+    font-weight: 200;
+  }
+
+  h1 {
+    margin: 0;
+    font-weight: 200;
+  }
+}
+

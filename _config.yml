@@ -1,0 +1,21 @@
+name: Colada
+multiviews: true
+#only works with https://github.com/stammy/jekyll, explained below
+
+source:      .
+destination: ./www
+includes:    ./_includes
+
+pygments:    true
+markdown:    rdiscount
+permalink:   /:title.html
+
+# base_url: http://paulstamatiou.com
+base_url: /
+description: "A blog covering Tech News, Reviews, Guides and Startups from developer and startup guy Paul Stamatiou."
+root_desc: "PaulStamatiou.com - Tech News, Reviews and Guides"
+
+rdiscount:
+  extensions: []
+
+exclude: ['Rakefile', 'README.markdown', 'config.rb']

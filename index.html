@@ -1,0 +1,26 @@
+---
+layout: default
+title: Colada
+---
+
+<div class="home">
+
+  <div class="posts-overview">
+
+    {% for post in site.posts %}
+      <article class="post format-excerpt">
+
+        <header>
+          <div class="entry-meta">{{ post.date | date_to_long_string }}</div>
+          <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
+        </header>
+
+        <div class="entry-content">
+          {{ post.excerpt }}
+        </div>
+
+      </article>
+    {% endfor %}
+  </div>
+
+</div>
