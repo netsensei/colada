@@ -4,11 +4,11 @@
  */
 
 body {
-  background: #fff;
+  /* background: #fff; */
+  background: #ecebe6;
 }
 
 sidebar {
-  background: #ecebe6;
 
   a {
     @include link-colors(#666, #111c29, #666, #666);
@@ -30,20 +30,38 @@ sidebar {
   .site-title {
     @include rhythm(0.125, 0, 0, 0.125);
     font-size: rhythm(1.5);
-    font-weight: 600;
+    font-weight: 500;
+  }
+
+  ul.online-presence {
+    @include horizontal-list-container();
+    @include rhythm(0, 0, 0, 0.5);
+    @include clearfix();
+    margin-left: auto;
+    marign-right: auto;
+    text-align: center;
+
+    > li {
+      @include horizontal-list-item(0.25em);
+      float: none;
+    }
   }
 
   .site-slogan {
-    @include rhythm(0);
+    @include rhythm(0, 0, 0, 0.5);
+    color: #777;
     font-size: rhythm(0.75);
     font-weight: 300;
 
     span {
       display: block;
       font-size: rhythm(0.625);
-      color: #777;
     }
   }
+}
+
+div.posts-overview > article:nth-child(1) {
+  @include rhythm(0, 0, 0, 1.5);
 }
 
 article {
@@ -58,8 +76,11 @@ article {
   }
 
   h1 {
-    margin: 0;
     font-weight: 200;
+    margin: 0;
+    a {
+      @include link-colors(#666, #111c29, #666, #666);
+    }
   }
 }
 

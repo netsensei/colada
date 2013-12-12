@@ -12,7 +12,7 @@ $h1-font-size : 2 * $base-font-size !default;
 $h2-font-size : 1.75 * $base-font-size !default;
 $h3-font-size : 1.25 * $base-font-size !default;
 $h4-font-size : 1 * $base-font-size !default;
-
+$code-font-size: 0.875 * $base-font-size !default;
 
 // 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
 //    http://clagnut.com/blog/348/#c790
@@ -55,6 +55,10 @@ h3 {
 
 h4 {
   @include adjust-font-size-to($h4-font-size);
+}
+
+code {
+  @include adjust-font-size-to($code-font-size);
 }
 
 /* Fonts */
