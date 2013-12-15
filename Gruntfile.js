@@ -24,7 +24,7 @@ module.exports = function (grunt) {
         livereload: true
       },
       html: {
-        files: ['**/*.html', '!_www/**/*.html'],
+        files: ['**/*.html', '**/*.markdown', '!www/**'],
         tasks: ['shell:jekyll']
       },
       css: {

@@ -13,7 +13,7 @@ body {
 sidebar {
 
   a {
-    @include link-colors(#666, #111c29, #666, #666);
+    @include link-colors(#111c29, #666, #111c29, #111c29);
     text-decoration: none;
   }
 
@@ -32,7 +32,7 @@ sidebar {
   .site-title {
     @include rhythm(0.125, 0, 0, 0.125);
     font-size: rhythm(1.5);
-    font-weight: 500;
+    font-weight: 400;
   }
 
   ul.online-presence {
@@ -83,6 +83,12 @@ article {
     }
   }
 
+  &.format-detail {
+    p:first-child {
+
+    }
+  }
+
   .entry-meta {
     color: #999;
     font-weight: 200;
@@ -94,6 +100,11 @@ article {
     a {
       @include link-colors(#666, #111c29, #666, #666);
     }
+  }
+
+  h2,
+  h3 {
+    font-weight: 100;
   }
 }
 

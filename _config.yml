@@ -18,4 +18,4 @@ root_desc: "PaulStamatiou.com - Tech News, Reviews and Guides"
 rdiscount:
   extensions: []
 
-exclude: ['Rakefile', 'README.markdown', 'config.rb', 'node_modules', 'Gruntfile', 'package.json']
+exclude: ['Rakefile', 'README.markdown', 'config.rb', 'node_modules', 'Gruntfile.js', 'package.json']

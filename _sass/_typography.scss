@@ -70,7 +70,7 @@ h1 {
 /* colors */
 
 a {
-  @include link-colors(#00c, #0cc, #c0c, #ccc, #cc0);
+  @include link-colors(#e59400, #ffa500, #b27300, #7f5200, #7f5200);
   text-decoration: none;
 }
 
