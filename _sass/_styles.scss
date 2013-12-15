@@ -73,10 +73,12 @@ article {
     border-bottom: 1px dotted #aaa;
 
     +:after {
+      font-family: 'EntypoRegular';
       background: $body-bg;
-      content: 'a';
+      color: #aaa;
+      content: '\2712';
       display: block;
-      margin: 0 auto -0.3em;
+      margin: 0 auto -0.4em;
       text-align: center;
       font-size: rhythm(1.25);
       width: rhythm(1.25);
