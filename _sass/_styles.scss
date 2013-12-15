@@ -3,9 +3,11 @@
  *   Colors, margins, paddings,...
  */
 
+$body-bg : #ecebe6 !default;
+
 body {
   /* background: #fff; */
-  background: #ecebe6;
+ background: $body-bg;
 }
 
 sidebar {
@@ -68,6 +70,17 @@ article {
 
   &.format-excerpt {
     @include rhythm(1, 0, 0, 1.5);
+    border-bottom: 1px dotted #aaa;
+
+    +:after {
+      background: $body-bg;
+      content: 'a';
+      display: block;
+      margin: 0 auto -0.3em;
+      text-align: center;
+      font-size: rhythm(1.25);
+      width: rhythm(1.25);
+    }
   }
 
   .entry-meta {
