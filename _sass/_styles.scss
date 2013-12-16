@@ -32,7 +32,7 @@ sidebar {
   .site-title {
     @include rhythm(0.125, 0, 0, 0.125);
     font-size: rhythm(1.5);
-    font-weight: 400;
+    font-weight: 200;
   }
 
   ul.online-presence {
@@ -70,25 +70,20 @@ article {
 
   &.format-excerpt {
     @include rhythm(1, 0, 0, 1.5);
-    border-bottom: 1px dotted #aaa;
-
-    +:after {
-      font-family: 'EntypoRegular';
-      background: $body-bg;
-      color: #aaa;
-      content: '\2712';
-      display: block;
-      margin: 0 auto -0.4em;
-      text-align: center;
-      font-size: rhythm(1.25);
-      width: rhythm(1.25);
-    }
   }
 
-  &.format-detail {
-    p:first-child {
+  border-bottom: 1px dotted #aaa;
 
-    }
+  &:after {
+    font-family: 'EntypoRegular';
+    background: $body-bg;
+    color: #aaa;
+    content: '\2712';
+    display: block;
+    margin: 0 auto -0.4em;
+    text-align: center;
+    font-size: rhythm(1.25);
+    width: rhythm(1.25);
   }
 
   .entry-meta {
@@ -110,3 +105,9 @@ article {
   }
 }
 
+.highlight {
+  pre {
+    padding: 1em;
+    @include border-radius(.5em, .5em);
+  }
+}
