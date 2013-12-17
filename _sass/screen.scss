@@ -12,17 +12,20 @@
  */
 
 /* ---------- Compass Extensions ---------- */
-@import "normalize";
+/* @import "normalize";
 @import "compass/typography";
 @import "compass/utilities";
-@import "compass/css3";
+@import "compass/css3"; */
 
-@import 'toolkit';
+/* @import 'toolkit';
 @import 'susy';
-@import 'respond-to';
+@import 'respond-to'; */
+
+@import "bourbon";
+@import "neat";
 
 /* ---------- Stylesheets ---------- */
 
 @import 'layout';
-@import 'styles';
 @import 'typography';
+@import 'styles';

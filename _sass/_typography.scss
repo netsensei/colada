@@ -4,9 +4,9 @@
 
 // Baseline
 
-@include establish-baseline;
+$base-font-size : 16;
 
-@include font-face("EntypoRegular", font-files("entypo/entypo.ttf", ttf, "entypo/entypo.otf", otf));
+@include font-face(EntypoRegular, '/css/fonts/entypo');
 $base-font-family: "Helvetica Neue", Helvetica, sans-serif;
 
 $h1-font-size : 2 * $base-font-size !default;
@@ -20,7 +20,7 @@ $code-font-size: 0.875 * $base-font-size !default;
 // 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
 //    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
 html {
-  font-size: 100% * ($base-font-size / 16px); /* 1 */
+  font-size: 100 * ($base-font-size / 16); /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -ms-text-size-adjust: 100%; /* 2 */
 }
@@ -37,29 +37,29 @@ textarea {
 
 /* Line-heights */
 body {
-  @include adjust-font-size-to($base-font-size);
+  font-size: em($base-font-size);
 }
 
 h1 {
-  @include adjust-font-size-to($h1-font-size);
+  font-size: em($h1-font-size);
 }
 
 h2 {
-  @include adjust-font-size-to($h2-font-size);
+  font-size: em($h2-font-size);
   margin: 0;
   padding: 0;
 }
 
 h3 {
-  @include adjust-font-size-to($h3-font-size);
+  font-size: em($h3-font-size);
 }
 
 h4 {
-  @include adjust-font-size-to($h4-font-size);
+  font-size: em($h4-font-size);
 }
 
 code {
-  @include adjust-font-size-to($code-font-size);
+  font-size: em($code-font-size);
 }
 
 /* Fonts */
@@ -72,7 +72,7 @@ h1 {
 
 a {
   /* @include link-colors(#e59400, #e59400, #b27300, #7f5200, #7f5200); */
-  @include link-colors(#b27300, #e59400, #e59400, #7f5200, #7f5200);
+  /* @include link-colors(#b27300, #e59400, #e59400, #7f5200, #7f5200); */
   text-decoration: none;
 }
 
