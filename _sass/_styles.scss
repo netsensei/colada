@@ -29,17 +29,7 @@ sidebar {
   }
 
   ul.online-presence {
-    /* @include horizontal-list-container();
-    @include rhythm(0, 0, 0, 0.5);
-    @include clearfix(); */
-    margin-left: auto;
-    marign-right: auto;
-    text-align: center;
-
-    > li {
-      /* @include horizontal-list-item(0.25em); */
-      float: none;
-    }
+     @extend %horizontal-unstyled-list;
   }
 
   .site-slogan {
@@ -67,18 +57,6 @@ article {
 
   border-bottom: 1px dotted #aaa;
 
-  &:after {
-    font-family: 'EntypoRegular';
-    background: $background;
-    color: #aaa;
-    content: '\2712';
-    display: block;
-    margin: 0 auto -0.4em;
-    text-align: center;
-    /* font-size: rhythm(1.25);
-    width: rhythm(1.25); */
-  }
-
   .entry-meta {
     color: #999;
     font-weight: 200;
@@ -96,6 +74,10 @@ article {
   h3 {
     font-weight: 100;
   }
+}
+
+article:after {
+ @extend %post-ordinance;
 }
 
 .highlight {

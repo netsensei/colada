@@ -185,6 +185,27 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+%horizontal-unstyled-list {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+sidebar ul.online-presence {
+  background: #aabbdd; }
+  %horizontal-unstyled-list li {
+    display: inline-block; }
+
+article:after {
+  font-family: 'EntypoRegular';
+  background: #ecebe6;
+  color: #aaaaaa;
+  content: '\2712';
+  display: block;
+  margin: 0 auto -0.7em;
+  text-align: center;
+  width: 1.75em;
+  font-size: 1.25em; }
+
 /**
  * Typography
  */
@@ -296,16 +317,6 @@ sidebar .site-title {
   /* @include rhythm(0.125, 0, 0, 0.125); */
   /* font-size: rhythm(1.5); */
   font-weight: 200; }
-sidebar ul.online-presence {
-  /* @include horizontal-list-container();
-    @include rhythm(0, 0, 0, 0.5);
-    @include clearfix(); */
-  margin-left: auto;
-  marign-right: auto;
-  text-align: center; }
-  sidebar ul.online-presence > li {
-    /* @include horizontal-list-item(0.25em); */
-    float: none; }
 sidebar .site-slogan {
   /* @include rhythm(0, 0, 0, 0.5); */
   color: #777777;
@@ -318,16 +329,6 @@ sidebar .site-slogan {
 
 article {
   border-bottom: 1px dotted #aaaaaa; }
-  article:after {
-    font-family: 'EntypoRegular';
-    background: #ecebe6;
-    color: #aaaaaa;
-    content: '\2712';
-    display: block;
-    margin: 0 auto -0.4em;
-    text-align: center;
-    /* font-size: rhythm(1.25);
-    width: rhythm(1.25); */ }
   article .entry-meta {
     color: #999999;
     font-weight: 200; }
@@ -336,6 +337,7 @@ article {
     margin: 0; }
   article h2, article h3 {
     font-weight: 100; }
+
 
 .highlight pre {
   padding: 1em;

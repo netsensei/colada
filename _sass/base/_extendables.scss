@@ -1,0 +1,29 @@
+// Menu
+// -------------------------
+%unstyled-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Horizontal menu
+// -------------------------
+%horizontal-unstyled-list {
+  @extend %unstyled-list;
+  background: #ABD;
+  li {
+    display: inline-block;
+  }
+}
+
+%post-ordinance {
+  font-family: 'EntypoRegular';
+  background: $background;
+  color: #aaa;
+  content: '\2712';
+  display: block;
+  margin: 0 auto -0.7em;
+  text-align: center;
+  width: 1.75em;
+  font-size: 1.25em;
+}
