@@ -3,13 +3,6 @@
  *   Colors, margins, paddings,...
  */
 
-$body-bg : #ecebe6 !default;
-
-body {
-  /* background: #fff; */
- background: $body-bg;
-}
-
 sidebar {
 
   a {
@@ -76,7 +69,7 @@ article {
 
   &:after {
     font-family: 'EntypoRegular';
-    background: $body-bg;
+    background: $background;
     color: #aaa;
     content: '\2712';
     display: block;

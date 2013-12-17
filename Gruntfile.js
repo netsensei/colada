@@ -3,8 +3,6 @@ module.exports = function (grunt) {
 
   var neat = require('node-neat').includePaths;
 
-  console.log(neat);
-
   // Config...
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
