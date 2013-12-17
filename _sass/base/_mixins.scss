@@ -1,0 +1,26 @@
+/**
+ * Mixins
+ */
+
+@mixin size($height, $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin link-colors($link, $hover, $active, $visited, $focus) {
+
+    color: $link;
+
+  &:hover {
+    color: $hover;
+  }
+  &:active {
+    color: $active;
+  }
+  &:visited {
+    color: $visited;
+  }
+  &:focus {
+    color: $focus;
+  }
+}

@@ -4,69 +4,65 @@
  */
 
 sidebar {
-
   a {
-    /* @include link-colors(#111c29, #666, #111c29, #111c29); */
+    @include link-colors(#111c29, #666, #111c29, #111c29, #111c29);
     text-decoration: none;
   }
+}
 
-  .avatar {
-    border-radius: 50%;
-    opacity: .8;
-    -webkit-transition: all 500ms ease-in;
-    -moz-transition: all 500ms ease-in;
-    -o-transition: all 500ms ease-in;
+.avatar {
+  border-radius: 50%;
+  opacity: .8;
+  -webkit-transition: all 500ms ease-in;
+  -moz-transition: all 500ms ease-in;
+  -o-transition: all 500ms ease-in;
+}
+
+.avatar:hover {
+  opacity: .95;
+}
+
+ul.online-presence {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline-block;
+    padding: 0 0.3em;
   }
+}
 
-  .avatar:hover {
-    opacity: .95;
-  }
+.site-title {
+  font-size: 3em;
+  font-weight: 200;
+}
 
-  .site-title {
-    /* @include rhythm(0.125, 0, 0, 0.125); */
-    /* font-size: rhythm(1.5); */
-    font-weight: 200;
-  }
+.site-slogan {
+  color: #777;
+  font-size: 1em;
+  font-weight: 300;
 
-  ul.online-presence {
-     @extend %horizontal-unstyled-list;
-  }
-
-  .site-slogan {
-    /* @include rhythm(0, 0, 0, 0.5); */
-    color: #777;
-    /* font-size: rhythm(0.75); */
-    font-weight: 300;
-
-    span {
-      display: block;
-      /* font-size: rhythm(0.625); */
-    }
+  span {
+    display: block;
   }
 }
 
 div.posts-overview > article:nth-child(1) {
-  /* @include rhythm(0, 0, 0, 1.5); */
+  margin-top: 0;
 }
 
 article {
 
   &.format-excerpt {
-    /* @include rhythm(1, 0, 0, 1.5); */
+    margin: 1em 0;
   }
 
   border-bottom: 1px dotted #aaa;
 
-  .entry-meta {
-    color: #999;
-    font-weight: 200;
-  }
-
   h1 {
     font-weight: 200;
-    margin: 0;
     a {
-      /* @include link-colors(#666, #111c29, #666, #666); */
+      @include link-colors(#666, #111c29, #666, #666, #666);
     }
   }
 
@@ -77,7 +73,12 @@ article {
 }
 
 article:after {
- @extend %post-ordinance;
+  @extend %post-ordinance;
+}
+
+.entry-meta {
+  color: #999;
+  font-weight: 200;
 }
 
 .highlight {
