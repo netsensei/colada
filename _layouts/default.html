@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
         <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
 
         <!-- syntax highlighting CSS -->
         <link rel="stylesheet" href="/css/zenburn.css">
@@ -13,22 +13,30 @@
         <link rel="stylesheet" href="/css/screen.css">
 
         <link href='http://fonts.googleapis.com/css?family=Raleway:200,300,600' rel='stylesheet' type='text/css'>
-        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="cleartype" content="on">
     </head>
 
     <body>
 
-      <div class="site">
+      <div class="container">
 
-        <sidebar>
+        <div class="main" >
 
-           {% include sidebar.html %}
+            <sidebar>
 
-        </sidebar>
+               {% include sidebar.html %}
 
-        <div class="content">
+            </sidebar>
 
-          {{ content }}
+            <div class="content">
+
+              {{ content }}
+
+            </div>
 
         </div>
 

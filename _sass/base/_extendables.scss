@@ -1,0 +1,41 @@
+// Menu
+// -------------------------
+%unstyledlist {
+}
+
+// Horizontal menu
+// -------------------------
+%horizontallist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    background: #ABC;
+  }
+}
+
+%post-ordinance {
+  font-family: 'EntypoRegular';
+  background: $background;
+  color: #aaa;
+  content: '\2712';
+  display: block;
+  margin: 0 auto -0.4em;
+  text-align: center;
+  width: 1.75em;
+  font-size: 2em;
+}
+
+%fa-twitter {
+  font-family: 'FontAwesome';
+  background: $background;
+  content: '\f099';
+}
+
+%fa-github {
+  font-family: 'FontAwesome';
+  background: $background;
+  content: '\f09b';
+}

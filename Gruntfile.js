@@ -1,6 +1,8 @@
 module.exports = function (grunt) {
   "use strict";
 
+  var neat = require('node-neat').includePaths;
+
   // Config...
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -29,7 +31,28 @@ module.exports = function (grunt) {
       },
       css: {
         files: ['./_sass/**/*.scss'],
-        tasks: ['compassCopy']
+        tasks: ['sassCopy']
+      }
+    },
+
+    sass: {
+      options: {
+        includePaths: neat,
+      },
+      dev: {
+        files: {
+          './css/screen.css': '_sass/screen.scss',
+          './css/ie.css': '_sass/ie.scss',
+          './css/print.css': '_sass/print.scss'
+        }
+      },
+      prod: {
+        files: {
+          './css/style.css': './sass/style.scss',
+          './css/ie.css': './sass/ie.scss',
+          './css/print.css': './sass/print.scss',
+          './css/wysiwyg.css': './sass/wysiwyg.scss'
+        }
       }
     },
 
@@ -58,10 +81,10 @@ module.exports = function (grunt) {
         options: {
           livereload: true,
           base: 'www/',
-          port: 9009,
+          port: 9009
         }
       }
-    },
+    }
 
   });
 
@@ -71,9 +94,11 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-sass');
 
   // Define a compass compile & copy task for livereload
   grunt.registerTask('compassCopy', ['compass:dev', 'copy:css']);
+  grunt.registerTask('sassCopy', ['sass:dev', 'copy:css']);
   grunt.registerTask('prod', ['compass:prod']);
 
   grunt.registerTask('server', [

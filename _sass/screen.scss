@@ -11,18 +11,21 @@
  * This file is compiled into style.css
  */
 
-/* ---------- Compass Extensions ---------- */
-@import "normalize";
-@import "compass/typography";
-@import "compass/utilities";
-@import "compass/css3";
+/* ---------- Bourbon Extensions ---------- */
 
-@import 'toolkit';
-@import 'susy';
-@import 'respond-to';
+@import "bourbon";
+@import "neat";
 
-/* ---------- Stylesheets ---------- */
+/* ---------- Base ---------- */
+
+@import 'base/variables';
+@import 'base/normalize';
+@import 'base/mixins';
+@import 'base/extendables';
+@import 'base/typography';
+
+/* ---------- Styles ---------- */
 
 @import 'layout';
 @import 'styles';
-@import 'typography';
+

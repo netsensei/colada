@@ -2,18 +2,8 @@
  * Typography
  */
 
-// Baseline
-
-@include establish-baseline;
-
-@include font-face("EntypoRegular", font-files("entypo/entypo.ttf", ttf, "entypo/entypo.otf", otf));
-$base-font-family: "Helvetica Neue", Helvetica, sans-serif;
-
-$h1-font-size : 2 * $base-font-size !default;
-$h2-font-size : 1.75 * $base-font-size !default;
-$h3-font-size : 1.25 * $base-font-size !default;
-$h4-font-size : 1 * $base-font-size !default;
-$code-font-size: 0.875 * $base-font-size !default;
+@include font-face(EntypoRegular, '/css/fonts/entypo/entypo');
+@include font-face(FontAwesome, '/css/fonts/fontAwesome/fontAwesome');
 
 // 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
 //    http://clagnut.com/blog/348/#c790
@@ -31,41 +21,51 @@ button,
 input,
 select,
 textarea {
-  color: #333;
   font-family: $base-font-family;
 }
 
 /* Line-heights */
-body {
-  @include adjust-font-size-to($base-font-size);
+
+body{
+  font-size: $base-font-size;
+  line-height: $base-line-height;
 }
 
 h1 {
-  @include adjust-font-size-to($h1-font-size);
+  margin: $h1_margin;
+  font-size: $h1_font_size;
+  line-height: 1.25;
 }
 
 h2 {
-  @include adjust-font-size-to($h2-font-size);
-  margin: 0;
-  padding: 0;
+  margin: $h2_margin;
+  font-size: $h2_font_size;
 }
 
 h3 {
-  @include adjust-font-size-to($h3-font-size);
+  margin: $h3_margin;
+  font-size: $h3_font_size;
 }
 
 h4 {
-  @include adjust-font-size-to($h4-font-size);
+  margin: $h4_margin;
+  font-size: $h4_font_size;
 }
 
-code {
-  @include adjust-font-size-to($code-font-size);
+h5 {
+  margin: $h5_margin;
+  font-size: $h5_font_size;
+}
+
+h6 {
+  margin: $h6_margin;
+  font-size: $h6_font_size;
 }
 
 /* Fonts */
 
 h1 {
-  font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: Raleway, $helvetica;
 }
 
 /* colors */
@@ -75,5 +75,4 @@ a {
   @include link-colors(#b27300, #e59400, #e59400, #7f5200, #7f5200);
   text-decoration: none;
 }
-
 

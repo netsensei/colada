@@ -3,6 +3,7 @@ layout: post
 title:  "Moving to new pastures"
 date:   2013-12-16 08:22:00
 categories: jekyll update
+comments: true
 ---
 Say hello to the new colada.be. This site has gotten a complete overhaul over the
 last couple of weeks. It's been designed and rebuild from scratch. The only thing
