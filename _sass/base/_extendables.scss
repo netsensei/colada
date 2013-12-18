@@ -27,3 +27,15 @@
   width: 1.75em;
   font-size: 1.25em;
 }
+
+%fa-twitter {
+  font-family: 'FontAwesome';
+  background: $background;
+  content: '\f099';
+}
+
+%fa-github {
+  font-family: 'FontAwesome';
+  background: $background;
+  content: '\f09b';
+}

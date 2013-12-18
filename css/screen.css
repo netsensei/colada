@@ -201,6 +201,16 @@ article:after {
   width: 1.75em;
   font-size: 1.25em; }
 
+ul.online-presence li.fa-twitter:before {
+  font-family: 'FontAwesome';
+  background: #ecebe6;
+  content: '\f099'; }
+
+ul.online-presence li.fa-github:before {
+  font-family: 'FontAwesome';
+  background: #ecebe6;
+  content: '\f09b'; }
+
 /**
  * Typography
  */
@@ -208,8 +218,15 @@ article:after {
   font-family: EntypoRegular;
   font-weight: normal;
   font-style: normal;
-  src: url('/css/fonts/entypo.eot');
-  src: url('/css/fonts/entypo.eot?#iefix') format('embedded-opentype'), url('/css/fonts/entypo.woff') format('woff'), url('/css/fonts/entypo.ttf') format('truetype'), url('/css/fonts/entypo.svg#EntypoRegular') format('svg'); }
+  src: url('/css/fonts/entypo/entypo.eot');
+  src: url('/css/fonts/entypo/entypo.eot?#iefix') format('embedded-opentype'), url('/css/fonts/entypo/entypo.woff') format('woff'), url('/css/fonts/entypo/entypo.ttf') format('truetype'), url('/css/fonts/entypo/entypo.svg#EntypoRegular') format('svg'); }
+
+@font-face {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  src: url('/css/fonts/fontAwesome/fontAwesome.eot');
+  src: url('/css/fonts/fontAwesome/fontAwesome.eot?#iefix') format('embedded-opentype'), url('/css/fonts/fontAwesome/fontAwesome.woff') format('woff'), url('/css/fonts/fontAwesome/fontAwesome.ttf') format('truetype'), url('/css/fonts/fontAwesome/fontAwesome.svg#FontAwesome') format('svg'); }
 
 html {
   font-size: 100%;
@@ -258,9 +275,8 @@ h1 {
 /* colors */
 a {
   /* @include link-colors(#e59400, #e59400, #b27300, #7f5200, #7f5200); */
+  color: #b27300;
   text-decoration: none; }
-  a:link {
-    color: #b27300; }
   a:hover {
     color: #e59400; }
   a:active {
@@ -307,9 +323,8 @@ a {
  *   Colors, margins, paddings,...
  */
 sidebar a {
+  color: #111c29;
   text-decoration: none; }
-  sidebar a:link {
-    color: #111c29; }
   sidebar a:hover {
     color: #666666; }
   sidebar a:active {
@@ -357,16 +372,16 @@ article {
     margin: 1em 0; }
   article h1 {
     font-weight: 200; }
-    article h1 a:link {
+    article h1 a {
       color: #666666; }
-    article h1 a:hover {
-      color: #111c29; }
-    article h1 a:active {
-      color: #666666; }
-    article h1 a:visited {
-      color: #666666; }
-    article h1 a:focus {
-      color: #666666; }
+      article h1 a:hover {
+        color: #111c29; }
+      article h1 a:active {
+        color: #666666; }
+      article h1 a:visited {
+        color: #666666; }
+      article h1 a:focus {
+        color: #666666; }
   article h2, article h3 {
     font-weight: 100; }
 

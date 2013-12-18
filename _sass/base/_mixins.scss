@@ -8,9 +8,7 @@
 }
 
 @mixin link-colors($link, $hover, $active, $visited, $focus) {
-
-    color: $link;
-
+  color: $link;
   &:hover {
     color: $hover;
   }

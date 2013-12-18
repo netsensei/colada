@@ -30,6 +30,14 @@ ul.online-presence {
     display: inline-block;
     padding: 0 0.3em;
   }
+
+  li.fa-twitter:before {
+    @extend %fa-twitter;
+  }
+
+  li.fa-github:before {
+    @extend %fa-github;
+  }
 }
 
 .site-title {
