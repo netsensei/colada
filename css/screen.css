@@ -291,32 +291,36 @@ a {
  * @file
  *   Defines the layout of the site
  */
-.site {
-  margin: 0;
+.container {
   max-width: 60em;
   margin-left: auto;
   margin-right: auto;
-  padding:  7em 0 0 0;
   margin: 0; }
-  .site:after {
+  .container:after {
     content: "";
     display: table;
     clear: both; }
-  .site sidebar {
+
+.main:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+@media screen and (min-width: 35em) {
+  .container sidebar {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 31.76157%;
-    text-align: center; }
-    .site sidebar:last-child {
+    width: 31.76157%; }
+    .container sidebar:last-child {
       margin-right: 0; }
-  .site .content {
+  .container .content {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 65.88078%; }
-    .site .content:last-child {
-      margin-right: 0; }
+    .container .content:last-child {
+      margin-right: 0; } }
 
 /**
  * @file

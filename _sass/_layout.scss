@@ -3,18 +3,23 @@
  *   Defines the layout of the site
  */
 
-.site {
+.container {
+  @include outer-container;
   margin: 0;
-  @include outer-container();
-  @include pad(7em 0 0 0);
-  margin: 0;
+}
 
-  sidebar {
-    @include span-columns(4);
-    text-align: center;
-  }
+.main {
+  @include clearfix;
+}
 
-  .content {
-    @include span-columns(8);
+.container {
+  @include media($breakpoint_1) {
+    sidebar {
+      @include span-columns(4);
+    }
+
+    .content {
+      @include span-columns(8 omega of 12);
+    }
   }
 }
