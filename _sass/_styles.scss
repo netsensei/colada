@@ -3,6 +3,42 @@
  *   Colors, margins, paddings,...
  */
 
+// Layout styling
+
+.container {
+  @include media($breakpoint_1) {
+    @include pad(7em 0 3em 0);
+  }
+}
+
+sidebar {
+  @include media($breakpoint_1) {
+    text-align: center;
+  }
+
+  @include media(max-width $breakpoint_1) {
+    .site-slogan,
+    .online-presence {
+      display: none;
+    }
+
+    .avatar,
+    .site-title {
+      display: inline;
+      vertical-align: middle;
+    }
+  }
+}
+
+sidebar {
+  @include media(max-width $breakpoint_1) {
+    margin: 1.5em 0;
+    display: block;
+  }
+}
+
+// Repeatables
+
 sidebar {
   a {
     @include link-colors(#111c29, #666, #111c29, #111c29, #111c29);
@@ -10,12 +46,21 @@ sidebar {
   }
 }
 
+h1 {
+  a {
+    @include link-colors(#666, #111c29, #666, #666, #666);
+  }
+}
+
+// Features
+
 .avatar {
   border-radius: 50%;
   opacity: .8;
   -webkit-transition: all 500ms ease-in;
   -moz-transition: all 500ms ease-in;
   -o-transition: all 500ms ease-in;
+  margin: 0 auto;
 }
 
 .avatar:hover {
@@ -60,18 +105,14 @@ div.posts-overview > article:nth-child(1) {
 }
 
 article {
-
-  &.format-excerpt {
-    margin: 1em 0;
-  }
-
   border-bottom: 1px dotted #aaa;
+}
+
+article {
+  color: #555;
 
   h1 {
     font-weight: 200;
-    a {
-      @include link-colors(#666, #111c29, #666, #666, #666);
-    }
   }
 
   h2,
@@ -82,6 +123,14 @@ article {
 
 article:after {
   @extend %post-ordinance;
+}
+
+.format-detail {
+  margin: 0 0 2em 0;
+}
+
+.format-excerpt {
+  margin: 1em 0;
 }
 
 .entry-meta {

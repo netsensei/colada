@@ -34,6 +34,7 @@ body{
 h1 {
   margin: $h1_margin;
   font-size: $h1_font_size;
+  line-height: 1.25;
 }
 
 h2 {
@@ -74,5 +75,4 @@ a {
   @include link-colors(#b27300, #e59400, #e59400, #7f5200, #7f5200);
   text-decoration: none;
 }
-
 

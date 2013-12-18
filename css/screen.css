@@ -196,10 +196,10 @@ article:after {
   color: #aaaaaa;
   content: '\2712';
   display: block;
-  margin: 0 auto -0.7em;
+  margin: 0 auto -0.4em;
   text-align: center;
   width: 1.75em;
-  font-size: 1.25em; }
+  font-size: 2em; }
 
 ul.online-presence li.fa-twitter:before {
   font-family: 'FontAwesome';
@@ -246,7 +246,8 @@ body {
 
 h1 {
   margin: 0.67em 0;
-  font-size: 2em; }
+  font-size: 2em;
+  line-height: 1.25; }
 
 h2 {
   margin: 0.83em 0;
@@ -295,7 +296,7 @@ a {
   max-width: 60em;
   margin-left: auto;
   margin-right: auto;
-  margin: 0; }
+  margin: 0 1em; }
   .container:after {
     content: "";
     display: table;
@@ -326,6 +327,25 @@ a {
  * @file
  *   Colors, margins, paddings,...
  */
+@media screen and (min-width: 35em) {
+  .container {
+    padding:  7em 0 3em 0; } }
+
+@media screen and (min-width: 35em) {
+  sidebar {
+    text-align: center; } }
+@media screen and (max-width: 35em) {
+  sidebar .site-slogan, sidebar .online-presence {
+    display: none; }
+  sidebar .avatar, sidebar .site-title {
+    display: inline;
+    vertical-align: middle; } }
+
+@media screen and (max-width: 35em) {
+  sidebar {
+    margin: 1.5em 0;
+    display: block; } }
+
 sidebar a {
   color: #111c29;
   text-decoration: none; }
@@ -338,12 +358,24 @@ sidebar a {
   sidebar a:focus {
     color: #111c29; }
 
+h1 a {
+  color: #666666; }
+  h1 a:hover {
+    color: #111c29; }
+  h1 a:active {
+    color: #666666; }
+  h1 a:visited {
+    color: #666666; }
+  h1 a:focus {
+    color: #666666; }
+
 .avatar {
   border-radius: 50%;
   opacity: 0.8;
   -webkit-transition: all 500ms ease-in;
   -moz-transition: all 500ms ease-in;
-  -o-transition: all 500ms ease-in; }
+  -o-transition: all 500ms ease-in;
+  margin: 0 auto; }
 
 .avatar:hover {
   opacity: 0.95; }
@@ -372,23 +404,20 @@ div.posts-overview > article:nth-child(1) {
 
 article {
   border-bottom: 1px dotted #aaaaaa; }
-  article.format-excerpt {
-    margin: 1em 0; }
+
+article {
+  color: #555555; }
   article h1 {
     font-weight: 200; }
-    article h1 a {
-      color: #666666; }
-      article h1 a:hover {
-        color: #111c29; }
-      article h1 a:active {
-        color: #666666; }
-      article h1 a:visited {
-        color: #666666; }
-      article h1 a:focus {
-        color: #666666; }
   article h2, article h3 {
     font-weight: 100; }
 
+
+.format-detail {
+  margin: 0 0 2em 0; }
+
+.format-excerpt {
+  margin: 1em 0; }
 
 .entry-meta {
   color: #999999;
