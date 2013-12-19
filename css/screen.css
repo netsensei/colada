@@ -190,7 +190,7 @@ table {
  */
 
 
-article:after {
+.format-excerpt:after, .format-detail .entry-content:after {
   font-family: 'EntypoRegular';
   background: #ecebe6;
   color: #aaaaaa;
@@ -246,8 +246,7 @@ body {
 
 h1 {
   margin: 0.67em 0;
-  font-size: 2em;
-  line-height: 1.25; }
+  font-size: 2em; }
 
 h2 {
   margin: 0.83em 0;
@@ -302,25 +301,25 @@ a {
     display: table;
     clear: both; }
 
-.main:after {
+.inner:after {
   content: "";
   display: table;
   clear: both; }
 
 @media screen and (min-width: 35em) {
-  .container sidebar {
+  .container .left {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 31.76157%; }
-    .container sidebar:last-child {
+    .container .left:last-child {
       margin-right: 0; }
-  .container .content {
+  .container .main {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 65.88078%; }
-    .container .content:last-child {
+    .container .main:last-child {
       margin-right: 0; } }
 
 /**
@@ -332,30 +331,36 @@ a {
     padding:  7em 0 3em 0; } }
 
 @media screen and (min-width: 35em) {
-  sidebar {
+  .left {
     text-align: center; } }
 @media screen and (max-width: 35em) {
-  sidebar .site-slogan, sidebar .online-presence {
+  .left .site-slogan, .left .online-presence {
     display: none; }
-  sidebar .avatar, sidebar .site-title {
+  .left .avatar, .left .site-title {
     display: inline;
     vertical-align: middle; } }
 
 @media screen and (max-width: 35em) {
-  sidebar {
+  .left {
     margin: 1.5em 0;
     display: block; } }
 
-sidebar a {
+.below {
+  margin-top: 3em; }
+  .below p {
+    color: #aaaaaa;
+    font-size: 1em; }
+
+.left a {
   color: #111c29;
   text-decoration: none; }
-  sidebar a:hover {
+  .left a:hover {
     color: #666666; }
-  sidebar a:active {
+  .left a:active {
     color: #111c29; }
-  sidebar a:visited {
+  .left a:visited {
     color: #111c29; }
-  sidebar a:focus {
+  .left a:focus {
     color: #111c29; }
 
 h1 a {
@@ -403,21 +408,24 @@ div.posts-overview > article:nth-child(1) {
   margin-top: 0; }
 
 article {
-  border-bottom: 1px dotted #aaaaaa; }
-
-article {
   color: #555555; }
   article h1 {
     font-weight: 200; }
   article h2, article h3 {
     font-weight: 100; }
 
-
 .format-detail {
   margin: 0 0 2em 0; }
 
 .format-excerpt {
+  border-bottom: 1px dotted #aaaaaa;
   margin: 1em 0; }
+
+
+.format-detail .entry-content {
+  border-bottom: 1px dotted #aaaaaa;
+  margin: 1em 0 2em 0; }
+
 
 .entry-meta {
   color: #999999;
@@ -425,4 +433,8 @@ article {
 
 .highlight pre {
   padding: 1em;
-  /* @include border-radius(.5em, .5em); */ }
+  font-size: 0.875em;
+  line-height: 1.25;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em; }

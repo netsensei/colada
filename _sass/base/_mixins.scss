@@ -22,3 +22,9 @@
     color: $focus;
   }
 }
+
+@mixin border-radius-all($radial) {
+  -webkit-border-radius: $radial;
+  -moz-border-radius: $radial;
+  border-radius: $radial;
+}
