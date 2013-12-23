@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Colada</title>
+    <description>Regular dispatches covering Tech and Web development brought by Matthias Vandermaesen.</description>
+    <link>http://www.colada.be</link>
+    <atom:link href="http://www.colada.be/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Moving to new pastures</title>
+        <description>&lt;p&gt;Say hello to the new colada.be. This site has gotten a complete overhaul. It's
+been redesigned and rebuild from scratch. It's one project I wanted to do over
+the fall season. Not only did I take the opportunity to try out several new hip
+tools such as &lt;a href=&quot;http://sass-lang.com/&quot;&gt;Sass&lt;/a&gt; &amp;amp;
+&lt;a href=&quot;http://gruntjs.com/&quot;&gt;Grunt&lt;/a&gt;, I also wanted to confront myself with
+my own creative process.&lt;/p&gt;
+
+&lt;h2&gt;Choosing Jekyll over a fully fledged CMS&lt;/h2&gt;
+
+&lt;p&gt;I've decided to move away from &lt;a href=&quot;http://drupal.org&quot;&gt;Drupal&lt;/a&gt; and go with
+ &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; as the motor for this site. Since I'm
+ a Drupal developer by trade, such change is a Big Thing. However there are
+ well-founded arguments to make such a move:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;This site is just a simple blog. Drupal is a complete content management
+framework. Even out of the box, it does a lot more then I need. Adding
+unneccessary complexity comes at a cost when it comes to security &amp;amp; performance.
+Any database-driven CMS requires regular attention and upkeep.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I wanted to learn new stuff. I've been completely missing the boat at the
+frontend of web development. SASS, mobile, frameworks,... I've been encapsulated
+in this bubble of backend Drupal development. This prompted me to explicitely
+dip my toes in new waters. Not having to care about the underlying CMS was
+important if I wanted to keep my focus on just writing frontend matter.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;If you have a hammer, every problem looks like a nail&lt;/em&gt;. Drupal is
+great. Although it allows you to build blogs, but that doesn't necessarily mean
+it's the best tool. It's &lt;em&gt;always&lt;/em&gt; worth exploring what's out there.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Just serving plain HTML &amp;amp; CSS makes sense when you're keeping things simple.
+Static site generators are just what you need: they automate just the most
+painstaking tasks when maintaining a collection of HTML documents.&lt;/p&gt;
+
+&lt;p&gt;Static site generators aren't a new concept, but the Jekyll project definitely
+has made them increasingly more popular in recent times. It's a logical choice
+since there's plenty documentation out there, and it's community is thriving.&lt;/p&gt;
+
+&lt;h2&gt;New paintjob&lt;/h2&gt;
+
+&lt;p&gt;I've chosen to refit the entire look &amp;amp; feel of the site. Here's why.&lt;/p&gt;
+
+&lt;p&gt;I'm not a designer. Not in sense that I can come up with visually stunning
+Photoshop designs with. However, I know what I like and I've read enough about
+typography, grid layouts and color to know the do's and don'ts. I wanted to give
+the creative spark a chance, and so I challenged myself.&lt;/p&gt;
+
+&lt;p&gt;The previous version relied on Drupal's default Bartik theme. I didn't bother
+building a new Drupal theme back then. The downside was that the site looked
+very unpersonal and very generic. I didn't like it and it didn't motivate me to
+keep up with new content.&lt;/p&gt;
+
+&lt;h2&gt;The process&lt;/h2&gt;
+
+&lt;p&gt;The worst client you can have is yourself. Past endeavours learned me that it's
+easy to get paralysed by self doubt, lack of confidence, loss of motivation and
+all that.&lt;/p&gt;
+
+&lt;p&gt;Instead of architecting a complete personal site with a portfolio and all that,
+I went for a simple design build within the browser. It was the perfect moment
+to pick up new things and look what did and didn't work. I've learned a lot
+about hip new tools such as SASS, Compass, Bourbon, NodeJS,... through my
+colleague and frontend maestro @frankbaele.&lt;/p&gt;
+
+&lt;p&gt;Kill your darlings. Halfway development, I decided to drop Compass for Bourbon
+(more on that later). The important thing here is that this project thaught me
+not to over think stuff too much.&lt;/p&gt;
+
+&lt;h2&gt;And now...&lt;/h2&gt;
+
+&lt;p&gt;Let's get to some proper writing.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 16 Dec 2013 08:22:00 +0000</pubDate>
+        <link>http://www.colada.be//moving-to-jekyll.html</link>
+        <guid isPermaLink="true">http://www.colada.be//moving-to-jekyll.html</guid>
+      </item>
+    
+      <item>
+        <title>Mollom for WordPress 2.0: Evolution</title>
+        <description>&lt;p&gt;Over the past couple years, I’ve been working on and off on the integration between &lt;a href=&quot;http://www.mollom.com&quot;&gt;Mollom&lt;/a&gt; and &lt;a href=&quot;http://wordpress.org&quot;&gt;WordPress&lt;/a&gt;. Today, I proudly present you &lt;a href=&quot;http://wordpress.org/plugins/mollom&quot;&gt;the release of the second version of the plugin&lt;/a&gt;. Nearly 4 years in development, the plugin has been completely re-architected. It contains many improvements and new features below and above the hood:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Optimized spam filtering by using Mollom’s latest REST API&lt;/li&gt;
+&lt;li&gt;User-friendly integration of secure CAPTCHAs in your project&lt;/li&gt;
+&lt;li&gt;Better handling of false-positives&lt;/li&gt;
+&lt;li&gt;Fending off human spammers through a network-wide reputation system&lt;/li&gt;
+&lt;li&gt;Advanced moderation through Mollom’s Content Moderation Platform (mollom.com/moderation)&lt;/li&gt;
+&lt;li&gt;… and much more!&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;If you’re interested in a feature overview: check out the blog of &lt;a href=&quot;http://daniel.kudwien.net/2013/07/stop-blog-spam-on-wordpress/&quot;&gt;Daniel ‘Sun’ Kudwien&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;» Download and install the &lt;a href=&quot;http://wordpress.org/plugins/mollom&quot;&gt;Mollom plugin from WordPress’ Plugin Directory&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Why did it take so long?&lt;/h2&gt;
+
+&lt;p&gt;Well, let’s go back in time. For me, this project started happenstance. I was fed up with spam on my &lt;a href=&quot;http://www.netsensei.be&quot;&gt;WordPress blog&lt;/a&gt;. &lt;a href=&quot;http://automattic.com&quot;&gt;Automattic&lt;/a&gt; had just released their &lt;a href=&quot;http://akismet.com&quot;&gt;Akismet&lt;/a&gt; spam filtering service, but spammers still managed to pollute my moderation queue. Around the same time, Dries released a first beta of a similar service called Mollom. It came with basic &lt;a href=&quot;http://drupal.org/project/mollom&quot;&gt;Drupal integration&lt;/a&gt;. I was interested and that very same day, I started working on a WordPress plugin. As time passed, this project became a way to scratch my own itch, contribute something back and have a great learning experience.&lt;/p&gt;
+
+&lt;p&gt;While I work together with the people at Mollom, I’ve never been affiliated with the company as an employee or paid freelancer. I’m still an independent third party developer doing this voluntarily after office hours. As such, this had an impact on the development process. Instead of a continuous effort, work progressed in series of spikes.&lt;/p&gt;
+
+&lt;h3&gt;The lack of second opinions&lt;/h3&gt;
+
+&lt;p&gt;As its sole developer, there were times when I had to take some distance from the project from time to time to keep perspective and focus. Today, I’ve come to recognise that I lacked a good soundboard: someone whom I can throw ideas at and hand me feedback. Daniel ‘Sun’ Kudwien has been involved in the rewrite over the last year. As a seasoned developer and core contributor for the Drupal project, his fresh view on things pushed the project in the right direction.&lt;/p&gt;
+
+&lt;p&gt;Testimony of this is &lt;a href=&quot;https://github.com/Mollom/wordpress-mollom/pull/25&quot;&gt;his proposed changeset&lt;/a&gt; which contained a radical different view on the architecture of the plugin. It was an eyeopener. It painfully showed me I had been working on this for too long without proper mentoring. I recognised that this code was the way to go, and so I accepted his code merely a day later.&lt;/p&gt;
+
+&lt;h3&gt;Catching up on evolving APIs&lt;/h3&gt;
+
+&lt;p&gt;Initially, Mollom’s API was XML-RPC based and contained only several core API calls. In the first months of development, I got a chance give feedback on mismatches between documentation and what the API actually did. While this first version was good enough to get started, it was not durable. For one, there was a complex server failover system which had to be implemented client-side in case the service was unavailable. And so, Mollom developed a proper &lt;a href=&quot;mollom.com/api&quot;&gt;REST API&lt;/a&gt; which came with a few fundamental changes to reduce complexity.&lt;/p&gt;
+
+&lt;p&gt;At that time, I came to a conclusion that the first version of the plugin wasn’t sustainable either. The plugin was functional, but not maintainable: integrating minor API changes, let alone the new REST API, was not feasible. A complete rewrite of the plugin was in order. Separating the client implementation of the API in PHP from any framework or application specific code became an important milestone. I ended up writing my own generic class which implemented the API. Around that time, Dries came to the same conclusion and opened up an issue in the &lt;a href=&quot;https://drupal.org/node/446994&quot;&gt;Drupal module issue queue&lt;/a&gt;. It was important to get this right for the Drupal module as well as the WordPress plugin. Today, both are leveraging the same &lt;a href=&quot;https://github.com/Mollom/MollomPHP&quot;&gt;independent PHP class&lt;/a&gt;. This is a big plus since management of changes in the Mollom API now happens in a flexible, loose-coupled fashion.&lt;/p&gt;
+
+&lt;h3&gt;Building on top of a legacy application&lt;/h3&gt;
+
+&lt;p&gt;WordPress itself proved to be a major hurdle. Although the system has evolved and expanded, it still contains quite a lot legacy code as it’s geared towards backward compatibility. The core focus of WordPress has always been to provide an easy-to-use blogging platform. As a result, the core architecture hasn’t changed much over the past decade.&lt;/p&gt;
+
+&lt;p&gt;A typical application specific characteristic is its rather monolithic build: major subsystems are only partly decoupled. While Drupal has a fully fledged centralized Form handling API, WordPress does not. In fact, it just sanitizes and replaces all user input before database storage, exposing none of the original user input. We had to work our way around this and substitute our own form handling for Mollom to play nicely. Because of the decentralized handling of forms, we were only able to target WordPress’ comment system for now.&lt;/p&gt;
+
+&lt;p&gt;WordPress also doesn’t keep track of state between different subscribed event callback executions. In other words, data added to an object in the pre_process_comment action gets lost before entering the comment_post action. Almost 5 years ago, as a rookie, I tried to &lt;a href=&quot;http://wordpress.org/support/topic/issue-with-global-variables&quot;&gt;solve this problem through global variables&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Missing a collaborative development platform&lt;/h3&gt;
+
+&lt;p&gt;Development of the first version started out on a Subversion repository hosted on wordpress.org. Over those years, the WordPress developer platform sadly didn’t make the same transitions as with &lt;a href=&quot;http://github.org&quot;&gt;GitHub&lt;/a&gt; or &lt;a href=&quot;http://drupal.org&quot;&gt;Drupal.org&lt;/a&gt;. The platform lacks transparency needed for any collaborative project. That’s why I moved to GitHub nearly three years ago.&lt;/p&gt;
+
+&lt;p&gt;Today, all development happens over at &lt;a href=&quot;https://github.com/Mollom/wordpress-mollom&quot;&gt;GitHub&lt;/a&gt;. All collaboration happens remote so a good platform which fosters teamwork, sharing of information, documentation, issues, code,... is a key factor in driving evolution. However, through git hooks we’re still pushing releases to the &lt;a href=&quot;http://wordpress.org/plugins/mollom&quot;&gt;subversion repository at wordpress.org&lt;/a&gt; since that’s still the authoritive repository where WordPress installations get their updates.&lt;/p&gt;
+
+&lt;h3&gt;Shifting personal priorities&lt;/h3&gt;
+
+&lt;p&gt;Several major changes happened in my personal life in the span of a few years. I moved a few times around, lived in different cities, bought and refurbished an apartment, changed jobs,... Finally, a few months ago, I moved in with my girlfriend and her 6 year old daughter. Although I love building stuff online, those changes shaped my outlook on life and the way I’m spending time today.&lt;/p&gt;
+
+&lt;h2&gt;So, what’s next?&lt;/h2&gt;
+
+&lt;p&gt;With a new major version out of the door, we can look forward towards new challenges to tackle.  Here’s a few things we’ll be considering:&lt;/p&gt;
+
+&lt;p&gt;Extend support towards other WordPress core forms. Our experience with Drupal learned us that spammers also target open registration forms, mass generating bogus accounts. Blocking those in a sensible way is an important challenge. We’ll also investigate other third party form generating plugins such as &lt;a href=&quot;http://wordpress.org/plugins/contact-form-7/&quot;&gt;Contact form 7&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The REST API contains more settings and protective measures than currently exposed to the end user. We’ll be looking at how to make relevant features of the API also available.&lt;/p&gt;
+
+&lt;p&gt;We’ll dedicate time to maintain this new version. This means fixing bugs and adding small improvements wherever possible. The idea is to push minor releases on a regular basis.&lt;/p&gt;
+
+&lt;p&gt;Receiving feedback from an active user base is important to any open source project. If you’re stumbling upon undiscovered bugs or problems, we invite you to submit a ticket in our &lt;a href=&quot;%E2%80%9Dhttps://github.com/Mollom/wordpress-mollom/issues?state=open%E2%80%9D&quot;&gt;GitHub issue queue&lt;/a&gt;. We also invite you to clone and try out the development code in our repository.&lt;/p&gt;
+
+&lt;p&gt;With your help, we hope to rid the world of spam allowing you to create better quality content.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 15 Dec 2013 22:19:14 +0000</pubDate>
+        <link>http://www.colada.be//mollom-wordpress-evolution.html</link>
+        <guid isPermaLink="true">http://www.colada.be//mollom-wordpress-evolution.html</guid>
+      </item>
+    
+      <item>
+        <title>Design preview</title>
+        <description>&lt;h1&gt;h1 title&lt;/h1&gt;
+
+&lt;h2&gt;h2 title&lt;/h2&gt;
+
+&lt;h3&gt;h3 title&lt;/h3&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 22 Nov 2013 22:32:00 +0000</pubDate>
+        <link>http://www.colada.be//design-preview.html</link>
+        <guid isPermaLink="true">http://www.colada.be//design-preview.html</guid>
+      </item>
+    
+      <item>
+        <title>A PHP example!</title>
+        <description>&lt;p&gt;You'll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
+To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;php&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;mymodule_custom_image_ds_field&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$field&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$show&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;field_get_items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;node&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$field&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;entity&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;field_show_image&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;value&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;$image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;field_get_items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;node&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$field&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;entity&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;field_image&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nv&quot;&gt;$variables&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;&amp;#39;style_name&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;square_thumbnail&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;&amp;#39;path&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;uri&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;theme&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;image_style&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$variables&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll's GitHub repo&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Nov 2013 22:32:00 +0000</pubDate>
+        <link>http://www.colada.be//a-php-example.html</link>
+        <guid isPermaLink="true">http://www.colada.be//a-php-example.html</guid>
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You'll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
+To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll's GitHub repo&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 19 Nov 2013 22:19:14 +0000</pubDate>
+        <link>http://www.colada.be//welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://www.colada.be//welcome-to-jekyll.html</guid>
+      </item>
+    
+  </channel>
+</rss>
