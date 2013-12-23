@@ -10,13 +10,13 @@ module.exports = function (grunt) {
     copy: {
       css : {
         src: 'css/**',
-        dest: 'www/'
+        dest: '_site/'
       }
     },
 
     shell: {
       jekyll: {
-        command: 'rm -rf www/*; jekyll build',
+        command: 'rm -rf _site/*; jekyll build',
         stdout: true
       }
     },
@@ -26,7 +26,7 @@ module.exports = function (grunt) {
         livereload: true
       },
       html: {
-        files: ['**/*.html', '**/*.markdown', '!www/**'],
+        files: ['**/*.html', '**/*.markdown', '!_site/**'],
         tasks: ['shell:jekyll']
       },
       css: {
@@ -80,7 +80,7 @@ module.exports = function (grunt) {
       server: {
         options: {
           livereload: true,
-          base: 'www/',
+          base: '_site/',
           port: 9009
         }
       }
