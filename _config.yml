@@ -1,5 +1,3 @@
-multiviews: true
-#only works with https://github.com/stammy/jekyll, explained below
 
 destination: ./_site
 includes:    ./_includes
@@ -12,14 +10,11 @@ paginate: 10
 paginate_path: "/page:num"
 
 # base_url: http://paulstamatiou.com
-base_url: /colada
+baseurl: /colada
 name: Colada
 description: "Regular dispatches covering Tech and Web development brought by Matthias Vandermaesen."
 root_desc: "colada.be - Dispatches on Tech and Web development"
 url: "http://www.colada.be"
-
-rdiscount:
-  extensions: []
 
 exclude: ['README.md', 'config.rb', 'node_modules', 'Gruntfile.js', 'package.json']
 
