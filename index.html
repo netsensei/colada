@@ -7,7 +7,8 @@ title: Regular dispatches covering Tech and Web development brought by Matthias 
 
   <div class="posts-overview">
 
-    {% for post in site.posts %}
+    <!-- This loops through the paginated posts -->
+    {% for post in paginator.posts %}
       <article class="post format-excerpt">
 
         <header>
@@ -21,6 +22,21 @@ title: Regular dispatches covering Tech and Web development brought by Matthias 
 
       </article>
     {% endfor %}
+
+    <!-- Pagination links -->
+    {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+      {% endif %}
+
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+      {% endif %}
+    </div>
+    {% endif %}
+
+
   </div>
 
 </div>
