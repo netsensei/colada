@@ -1,2 +1,5 @@
 language: ruby
-script: "bundle exec jekyll build"
+rvm:
+  - "1.9.3"
+script:
+  - "bundle exec jekyll build"
