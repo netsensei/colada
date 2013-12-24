@@ -30,7 +30,7 @@ module.exports = function (grunt) {
         tasks: ['shell:jekyll']
       },
       css: {
-        files: ['./_sass/**/*.scss'],
+        files: ['./sass/**/*.scss'],
         tasks: ['sassCopy']
       }
     },
@@ -41,9 +41,9 @@ module.exports = function (grunt) {
       },
       dev: {
         files: {
-          './css/screen.css': '_sass/screen.scss',
-          './css/ie.css': '_sass/ie.scss',
-          './css/print.css': '_sass/print.scss'
+          './css/screen.css': 'sass/screen.scss',
+          './css/ie.css': 'sass/ie.scss',
+          './css/print.css': 'sass/print.scss'
         }
       },
       prod: {
@@ -60,7 +60,7 @@ module.exports = function (grunt) {
       dev: {
         options: {
           config: './config.rb',
-          sassDir: './_sass',
+          sassDir: './sass',
           cssDir: './css',
           environment: 'development'
         }

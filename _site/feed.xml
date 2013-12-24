@@ -3,8 +3,8 @@
   <channel>
     <title>Colada</title>
     <description>Regular dispatches covering Tech and Web development brought by Matthias Vandermaesen.</description>
-    <link>http://www.colada.be</link>
-    <atom:link href="http://www.colada.be/feed.xml" rel="self" type="application/rss+xml" />
+    <link></link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>Moving to new pastures</title>
@@ -81,8 +81,8 @@ not to over think stuff too much.&lt;/p&gt;
 &lt;p&gt;Let's get to some proper writing.&lt;/p&gt;
 </description>
         <pubDate>Mon, 16 Dec 2013 08:22:00 +0000</pubDate>
-        <link>http://www.colada.be//moving-to-jekyll.html</link>
-        <guid isPermaLink="true">http://www.colada.be//moving-to-jekyll.html</guid>
+        <link>//moving-to-jekyll.html</link>
+        <guid isPermaLink="true">//moving-to-jekyll.html</guid>
       </item>
     
       <item>
@@ -154,8 +154,8 @@ not to over think stuff too much.&lt;/p&gt;
 &lt;p&gt;With your help, we hope to rid the world of spam allowing you to create better quality content.&lt;/p&gt;
 </description>
         <pubDate>Sun, 15 Dec 2013 22:19:14 +0000</pubDate>
-        <link>http://www.colada.be//mollom-wordpress-evolution.html</link>
-        <guid isPermaLink="true">http://www.colada.be//mollom-wordpress-evolution.html</guid>
+        <link>//mollom-wordpress-evolution.html</link>
+        <guid isPermaLink="true">//mollom-wordpress-evolution.html</guid>
       </item>
     
       <item>
@@ -169,8 +169,8 @@ not to over think stuff too much.&lt;/p&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
 </description>
         <pubDate>Fri, 22 Nov 2013 22:32:00 +0000</pubDate>
-        <link>http://www.colada.be//design-preview.html</link>
-        <guid isPermaLink="true">http://www.colada.be//design-preview.html</guid>
+        <link>//design-preview.html</link>
+        <guid isPermaLink="true">//design-preview.html</guid>
       </item>
     
       <item>
@@ -201,8 +201,8 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll's GitHub repo&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Wed, 20 Nov 2013 22:32:00 +0000</pubDate>
-        <link>http://www.colada.be//a-php-example.html</link>
-        <guid isPermaLink="true">http://www.colada.be//a-php-example.html</guid>
+        <link>//a-php-example.html</link>
+        <guid isPermaLink="true">//a-php-example.html</guid>
       </item>
     
       <item>
@@ -223,8 +223,8 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll's GitHub repo&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Tue, 19 Nov 2013 22:19:14 +0000</pubDate>
-        <link>http://www.colada.be//welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://www.colada.be//welcome-to-jekyll.html</guid>
+        <link>//welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">//welcome-to-jekyll.html</guid>
       </item>
     
   </channel>
