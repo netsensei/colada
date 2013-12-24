@@ -5,8 +5,6 @@ permalink:   /:title.html
 paginate: 10
 paginate_path: "/page:num"
 
-baseurl: /colada
-
 name: Colada
 description: "Regular dispatches covering Tech and Web development brought by Matthias Vandermaesen."
 root_desc: "colada.be - Dispatches on Tech and Web development"
