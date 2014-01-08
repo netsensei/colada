@@ -161,3 +161,17 @@ div.posts-overview > article:nth-child(1) {
     @include border-radius-all(0.5em);
   }
 }
+
+.pos-left {
+  @include media($breakpoint_1) {
+    float: left;
+    margin: 0 0.75em 0.25em 0;
+  }
+}
+
+.pos-right {
+  @include media($breakpoint_1) {
+    float: right;
+    margin: 0 0 0.25em 0.75em;
+  }
+}
