@@ -96,6 +96,7 @@ ul.online-presence {
 .site-title {
   font-size: 3em;
   font-weight: 200;
+  line-height: 1em;
 }
 
 .site-slogan {
@@ -155,8 +156,22 @@ div.posts-overview > article:nth-child(1) {
 .highlight {
   pre {
     padding: 1em;
-    font-size: 0.875em;
+    font-size: 0.725em;
     line-height: 1.25;
     @include border-radius-all(0.5em);
+  }
+}
+
+.pos-left {
+  @include media($breakpoint_1) {
+    float: left;
+    margin: 0 0.75em 0.25em 0;
+  }
+}
+
+.pos-right {
+  @include media($breakpoint_1) {
+    float: right;
+    margin: 0 0 0.25em 0.75em;
   }
 }
