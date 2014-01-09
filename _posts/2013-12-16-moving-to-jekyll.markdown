@@ -66,11 +66,17 @@ Instead of architecting a complete personal site with a portfolio and all that,
 I went for a simple design build within the browser. It was the perfect moment
 to pick up new things and look what did and didn't work. I've learned a lot
 about hip new tools such as SASS, Compass, Bourbon, NodeJS,... through my
-colleague and frontend maestro @frankbaele.
+colleague and frontend maestro <a href="http://twitter.com/frankbaele">@frankbaele</a>.
 
-Kill your darlings. Halfway development, I decided to drop Compass for Bourbon
-(more on that later). The important thing here is that this project thaught me
-not to over think stuff too much.
+I'm not very good at killing my darlings. Changing ideas and letting go of your
+initial assumptions can be beneficial, however. So, halfway development, I
+decided to drop <a href="http://compass-style.org">Compass</a> for
+<a href="http://bourbon.io">Bourbon</a>. As a consequence, I had to throw away
+a lot of what I had already written. The flipside are better maintainable,
+less Ruby dependent, stylesheets. I like that.
+
+The take away here is that this project thaught me not to over think stuff too
+much.
 
 ## And now...
 
