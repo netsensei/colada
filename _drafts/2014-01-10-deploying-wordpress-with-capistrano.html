@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "Easily deploy WordPress with capistrano"
+date:   2012-09-08 20:00:00
+categories: WordPress Capistrano
+comments: true
+---
+While this is blog is a new project, I've been curating my personal lifelog on
+netsensei.be for the past decade. I started out using Movable Type but in 2004 I switched to WordPress. Deployment of updates has always been a nagging problem. I went through the motions using FTP, SCP and other tools. Since the release cycle of WordPress upgrades has shortened, I don't want to lose time over moving a bunch of files.
+
+So, I set out to look for a better way of maintaining WordPress. A solution had to answer to these requirements:
+
+* Minimize time spent moving files around
+* Integrate seamlessly with my private BitBucket repo
+* Preferably be as terse as a one line command
+* Be secure
+* Be maintainable and well documented
+
+## Pressto
+
+I got inspired by these two blogposts:
+
+* <a href="http://www.mixd.co.uk/blog/deploying-wordpress-using-git-and-capistrano/">Deploying WordPress with Git and Capistrano</a> by Aaron Thomas.
+* <a href="http://roots.io/using-composer-with-wordpress/">Using Composer with WordPress</a> by Scott Walkinshaw.
+
+I combined the ideas in both articles to create Pressto. It's a boilerplate for new and existing WordPress projects and makes Capistrano work with Composer.
+
+## Capistrano
+
+The
