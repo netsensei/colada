@@ -12,6 +12,9 @@ nbproject
 # Ignore sass-cache files.
 *.sass-cache*
 
+# Ignore dynamic generated content
+_site
+
 # Node stuff
 .grunt
 npm-debug.log
