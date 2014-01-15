@@ -10,11 +10,11 @@
           <title>{{ site.name }} - {{ site.description }}</title>
         {% endif %}
 
-        <!-- syntax highlighting CSS -->
         <link rel="stylesheet" href="/css/zenburn.css">
-
-        <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/screen.css">
+
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/jquery.fitvids.js"></script>
 
         <link href='http://fonts.googleapis.com/css?family=Raleway:200,300,600' rel='stylesheet' type='text/css'>
 
@@ -66,7 +66,12 @@
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
+
+          $(document).ready(function(){
+            $(".main").fitVids();
+          });
       </script>
+
 
     </body>
 </html>
