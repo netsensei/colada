@@ -91,6 +91,11 @@ ul.online-presence {
   li.fa-github:before {
     @extend %fa-github;
   }
+
+  li.fa-youtube:before {
+    @extend %fa-youtube;
+  }
+
 }
 
 .site-title {

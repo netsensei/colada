@@ -211,6 +211,11 @@ ul.online-presence li.fa-github:before {
   background: #ecebe6;
   content: '\f09b'; }
 
+ul.online-presence li.fa-youtube:before {
+  font-family: 'FontAwesome';
+  background: #ecebe6;
+  content: '\f167'; }
+
 /**
  * Typography
  */
