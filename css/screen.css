@@ -201,17 +201,17 @@ table {
   width: 1.75em;
   font-size: 2em; }
 
-ul.online-presence li.fa-twitter:before {
+ul.online-presence li a.fa-twitter:before {
   font-family: 'FontAwesome';
   background: #ecebe6;
   content: '\f099'; }
 
-ul.online-presence li.fa-github:before {
+ul.online-presence li a.fa-github:before {
   font-family: 'FontAwesome';
   background: #ecebe6;
   content: '\f09b'; }
 
-ul.online-presence li.fa-youtube:before {
+ul.online-presence li a.fa-youtube:before {
   font-family: 'FontAwesome';
   background: #ecebe6;
   content: '\f167'; }
@@ -364,7 +364,7 @@ a {
   .left a:active {
     color: #111c29; }
   .left a:visited {
-    color: #111c29; }
+    color: #666666; }
   .left a:focus {
     color: #111c29; }
 
@@ -393,7 +393,8 @@ h1 a {
 ul.online-presence {
   list-style: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-size: 1.5em; }
   ul.online-presence li {
     display: inline-block;
     padding: 0 0.3em; }

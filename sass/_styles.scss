@@ -49,7 +49,7 @@
 
 .left {
   a {
-    @include link-colors(#111c29, #666, #111c29, #111c29, #111c29);
+    @include link-colors(#111c29, #666, #111c29, #666, #111c29);
     text-decoration: none;
   }
 }
@@ -79,20 +79,22 @@ ul.online-presence {
   list-style: none;
   margin: 0;
   padding: 0;
+  font-size: 1.5em;
+
   li {
     display: inline-block;
     padding: 0 0.3em;
   }
 
-  li.fa-twitter:before {
+  li a.fa-twitter:before {
     @extend %fa-twitter;
   }
 
-  li.fa-github:before {
+  li a.fa-github:before {
     @extend %fa-github;
   }
 
-  li.fa-youtube:before {
+  li a.fa-youtube:before {
     @extend %fa-youtube;
   }
 
