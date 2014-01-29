@@ -56,26 +56,6 @@ module.exports = function (grunt) {
       }
     },
 
-    compass: {
-      dev: {
-        options: {
-          config: './config.rb',
-          sassDir: './sass',
-          cssDir: './css',
-          environment: 'development'
-        }
-      },
-      prod: {
-        options: {
-        config: './config.rb',
-        sassDir: './sass',
-        cssDir: './css',
-        environment: 'production',
-          force: true
-        }
-      }
-    },
-
     connect: {
       server: {
         options: {
@@ -91,7 +71,6 @@ module.exports = function (grunt) {
 
   // Load tasks...
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-shell');
