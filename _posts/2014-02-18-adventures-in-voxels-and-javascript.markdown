@@ -11,7 +11,7 @@ A few weeks ago, I decided to try out something completely different: a foray in
 
 As a Drupal backend developer, writing PHP covers the better part of my working days. Despite its' shortcomings, I've come to like PHP. But because its' a server side preprocessing language, PHP's application domain is kinda limited. Javascript isn't that secluded. With the advent of such technologies as NodeJS and advanced browser capabilities, it has proven to be a very versatile tool.
 
-While working on this site over the fall of last year, I've tinkered with JavaScript tangently. I've experimented with [GruntJS](http://www.gruntjs.com) and implemented the odd JQuery helper plugin.
+While working on this site over the fall of last year, I've tinkered with JavaScript tangentially. I've experimented with [GruntJS](http://www.gruntjs.com) and implemented the odd JQuery helper plugin.
 
 So, I got a taste to venture a bit further.
 
