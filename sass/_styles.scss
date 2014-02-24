@@ -151,6 +151,12 @@ div.posts-overview > article:nth-child(1) {
   margin: 1em 0 2em 0;
 }
 
+.format-detail .entry-content {
+  img {
+    max-width: 100%;
+  }
+}
+
 .format-detail .entry-content:after {
   @extend %post-ordinance;
 }
