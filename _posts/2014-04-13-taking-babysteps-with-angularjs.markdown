@@ -43,5 +43,6 @@ As a Drupal developer, trying to build complex forms and experiences while solel
 
 The [next major version](https://drupal.org/drupal-8.0) will be especially well equiped to deal with these new tools.
 
-The most important take away? Getting to know these new tools is important regardless of your role in your team/company. They are obvioulsy here to stay.
+The most important take away? Try to learn these new tools regardless of your role in your team/company. They bridge the gap between what we nowadays call frontend/backend. They will have a profoundly impact on your process and help you focus on delivering great experiences, instead of having to spend effort in solving mundane problems.
+
 
