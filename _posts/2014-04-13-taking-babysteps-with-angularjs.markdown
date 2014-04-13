@@ -17,11 +17,11 @@ It's easy to step into Angular. The [PhoneCat tutorial](http://docs.angularjs.or
 
 While documentation is in abundance, you can easily lose track. The API has evolved rapidly so you should beware of outdated information.
 
-You get the most out of Angularif you combine it with tools like Grunt, NodejS and Bower. Tutorials might be very terse or assume you have already partly taken steps to setup and configure your environment. Also, there is more then one way to get these tools to work together. Laying documentation side by side can easily add to your confusion.
+You get the most out of Angular in combination with tools like Grunt, NodejS and Bower. Articles and tutorials might be terse or assume you have already partly taken steps to setup and configure your environment. Also, there is more then one way to get these tools to work together. Laying documentation side by side can add to your confusion.
 
-You want to build a more complex app? Modelling a consistent folder structure becomes crucial if you want to maintain your sanity. Seed projects can be helpful, but deciding which one to pick can be challenging.
+You want to build a more complex app? Modelling a consistent folder structure becomes crucial if you want to maintain your sanity. Seed projects can be helpful, but deciding which one to pick can be challenging. Take a bit of extra time to try and compare them and go with the one which suits your use case best.
 
-I went through several trail-and-error experiences while grokking documentation and code. But don't let that put you off.
+I went through several trail-and-error experiences while grokking documentation and setting things up. But don't let that put you off.
 
 **Front end unit testing is awesome**
 
