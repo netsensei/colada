@@ -35,6 +35,8 @@ The [$http service](http://docs.angularjs.org/api/ng/service/$http) is Angulars'
 
 The [$resource factory](http://docs.angularjs.org/api/ngResource/service/$resource) is built on top of $http and abstracts the last complexities of dealing with REST api's away.
 
+[David Mosher](http://blog.davemo.com/) has done an excellent [screencast on end-to-end with AngularJS and Laravel](http://blog.davemo.com/posts/2013-05-21-end-to-end-with-angularjs.html) that shows off how to hook up Angular with a popular backend framework.
+
 Will I venture further with frameworks like Angular? Yes!
 
 As a Drupal developer, trying to build complex forms and experiences while solely relying on the Drupal API has caused my fair share of headaches. I've unleashed Angular on a few use cases and I'm amazed how fast it allowed me to build what used to be hard to implement features. Front end frameworks also hugely tone down the amount of complex PHP logic you'll write to deal with things like validation, keeping track of state, etc.
