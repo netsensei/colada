@@ -13,8 +13,9 @@ Earlier this month, I attended a Drupal User Group, hosted at the XIO offices in
 
 I felt that a very introductory screencast that just focusses on the integration itself, would be a great addition. So, without further ado:
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/HrnWHSr0gSA" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=p3zSQieBIe8" frameborder="0" allowfullscreen></iframe>
+
 
 The gist of this screencast:
 
-I'm building an app from scratch that displays three Drupal nodes. The data is exposed by Drupal via Views and [Views Datasource](https://drupal.org/project/views_datasource) modules while I use the [AngularJS](https://drupal.org/project/angularjs) module and [Grunt](http://gruntjs.com) to build a custom Angular app.
+I'm building an AngularJS app from scratch. The data is exposed by Drupal via Views and [Views Datasource](https://drupal.org/project/views_datasource) modules. I use the [AngularJS](https://drupal.org/project/angularjs) module and [Grunt](http://gruntjs.com) to build a custom app which displays a list of nodes.
