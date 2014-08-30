@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Taming breadcrumbs in Drupal"
-date:   2014-08-25 20:00:00
+date:   2014-08-30 20:00:00
 categories: Drupal menu
 comments: true
 ---
