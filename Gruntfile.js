@@ -21,6 +21,32 @@ module.exports = function (grunt) {
       }
     },
 
+    sass: {
+      options: {
+        includePaths: neat,
+      },
+      dev: {
+        options: {
+          outputStyle: 'expanded'
+        },
+        files: {
+          './css/screen.css': 'sass/screen.scss',
+          './css/ie.css': 'sass/ie.scss',
+          './css/print.css': 'sass/print.scss'
+        }
+      },
+      prod: {
+        options: {
+          outputStyle: 'compressed'
+        },
+        files: {
+          './css/screen.css': 'sass/screen.scss',
+          './css/ie.css': 'sass/ie.scss',
+          './css/print.css': 'sass/print.scss'
+        }
+      }
+    },
+
     watch: {
       options: {
         livereload: true
@@ -29,30 +55,9 @@ module.exports = function (grunt) {
         files: ['**/*.html', '**/*.markdown', '!_site/**'],
         tasks: ['shell:jekyll']
       },
-      css: {
+      sass: {
         files: ['./sass/**/*.scss'],
         tasks: ['sassCopy']
-      }
-    },
-
-    sass: {
-      options: {
-        includePaths: neat,
-      },
-      dev: {
-        files: {
-          './css/screen.css': 'sass/screen.scss',
-          './css/ie.css': 'sass/ie.scss',
-          './css/print.css': 'sass/print.scss'
-        }
-      },
-      prod: {
-        files: {
-          './css/style.css': './sass/style.scss',
-          './css/ie.css': './sass/ie.scss',
-          './css/print.css': './sass/print.scss',
-          './css/wysiwyg.css': './sass/wysiwyg.scss'
-        }
       }
     },
 
@@ -66,7 +71,6 @@ module.exports = function (grunt) {
         }
       }
     }
-
   });
 
   // Load tasks...
@@ -77,14 +81,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-sass');
 
   // Define a compass compile & copy task for livereload
-  grunt.registerTask('compassCopy', ['compass:dev', 'copy:css']);
   grunt.registerTask('sassCopy', ['sass:dev', 'copy:css']);
-  grunt.registerTask('prod', ['compass:prod']);
-
-  grunt.registerTask('server', [
-    'connect:server',
-    'watch'
-  ]);
+  grunt.registerTask('server', ['connect:server', 'watch']);
 
   // Default task.
   grunt.registerTask('default', 'server');
