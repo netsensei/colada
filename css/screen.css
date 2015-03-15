@@ -399,6 +399,8 @@ ul.online-presence {
   ul.online-presence li {
     display: inline-block;
     padding: 0 0.3em; }
+  ul.online-presence li a:hover {
+    color: #111111; }
 
 .site-title {
   font-size: 3em;

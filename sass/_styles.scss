@@ -98,6 +98,9 @@ ul.online-presence {
     @extend %fa-youtube;
   }
 
+  li a:hover {
+    color: #111;
+  }
 }
 
 .site-title {
