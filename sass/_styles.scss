@@ -169,8 +169,10 @@ div.posts-overview > article:nth-child(1) {
 .highlight {
   pre {
     padding: 1em;
-    font-size: 0.725em;
+    font-size: 0.825em;
     line-height: 1.25;
+    white-space: pre;
+    overflow: auto;
     @include border-radius-all(0.5em);
   }
 }
