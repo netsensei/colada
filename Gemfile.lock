@@ -60,3 +60,4 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll (~> 1.4.2)

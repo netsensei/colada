@@ -90,8 +90,8 @@ code, kbd, pre, samp {
 
 pre {
   white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word; }
+  /* white-space: pre-wrap;
+  word-wrap: break-word; */ }
 
 q {
   quotes: "\201C" "\201D" "\2018" "\2019"; }
@@ -399,6 +399,8 @@ ul.online-presence {
   ul.online-presence li {
     display: inline-block;
     padding: 0 0.3em; }
+  ul.online-presence li a:hover {
+    color: #111111; }
 
 .site-title {
   font-size: 3em;
@@ -444,8 +446,10 @@ div.posts-overview > article:nth-child(1) {
 
 .highlight pre {
   padding: 1em;
-  font-size: 0.725em;
+  font-size: 0.825em;
   line-height: 1.25;
+  white-space: pre;
+  overflow: auto;
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
   border-radius: 0.5em; }
