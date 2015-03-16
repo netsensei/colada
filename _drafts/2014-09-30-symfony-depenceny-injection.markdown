@@ -32,7 +32,7 @@ We'll use [Composer](https://getcomposer.org/) to download and install all the n
 
 ## Setting the stage
 
-Let's create a new project folder and add a <code>composer.json</code> file.
+Let's create a new project folder and add a <code class="ihl">composer.json</code> file.
 
 {% highlight bash %}
 mkdir airlines
@@ -68,7 +68,7 @@ Add this to the composer.json file:
 }
 {% endhighlight json %}
 
-Let's take a look at the <code>require</code> property. The <code>symfony/console</code> and <code>guzzle/guzzle</code> entries refer to the libraries our application is going to leverage to define a new terminal command and make HTTP calls. The <code>symfony/*</code> entries refer to the packages we are going to need to make DI happen.
+Let's take a look at the <code class="ihl">require</code> property. The <code class="ihl">symfony/console</code> and <code class="ihl">guzzle/guzzle</code> entries refer to the libraries our application is going to leverage to define a new terminal command and make HTTP calls. The <code class="ihl">symfony/*</code> entries refer to the packages we are going to need to make DI happen.
 
 The file describes all the packages the application will need. Now let's go install them.
 
@@ -76,15 +76,15 @@ The file describes all the packages the application will need. Now let's go inst
 composer install
 {% endhighlight bash %}
 
-Alternatively, you could use <code>composer init</code> to create a composer.json file and <code>composer required</code> to fetch and add those packages.
+Alternatively, you could use <code class="ihl">composer init</code class="ihl"> to create a composer.json file and <code class="ihl">composer required</code> to fetch and add those packages.
 
-You should end up with a <code>vendor/</code> folder containing all the libraries we've specified in the composer.json file.
+You should end up with a <code class="ihl">vendor/</code> folder containing all the libraries we've specified in the composer.json file.
 
 ## Bootstrap the application
 
 Now let's go and create the actual application itself. We start with writing our bootstrapping code. This code will bootstrap all the components, load everything and kick things off.
 
-Let's make a new <code>app/</code> folder inside your application folder and create a <code>console</code> file within that folder. The file should be executable as we will execute it directly from the command line.
+Let's make a new <code class="ihl">app/</code> folder inside your application folder and create a <code class="ihl">console</code> file within that folder. The file should be executable as we will execute it directly from the command line.
 
 {% highlight bash %}
 mkdir app
@@ -148,14 +148,16 @@ $main->run();
 ?>
 {% endhighlight php %}
 
-The comments should be self explanatory. Note that the code is going to load of a file called <code>services.yml</code> which can found in the <code>config/</code> folder. This file does two specific things:
+The comments should be self explanatory. Note that the code is going to load of a file called <code class="ihl">services.yml</code> which can found in the <code class="ihl">config/</code> folder. This file does two specific things:
 
 * It registers all the project specific classes
 * It defines all the classes/libraries these classes depend on.
 
-The other noteworthy thing are the last two lines. First, an instance of the <code>airlines.main</code> service, which is defined in the YAML file, is being instantiated, and then its' <code>run()</code> method is invoked which will set the entire application in motion.
+The other noteworthy thing are the last two lines. First, an instance of the <code class="ihl">airlines.main</code> service, which is defined in the YAML file, is being instantiated, and then its' <code class="ihl">run()</code> method is invoked which will set the entire application in motion.
 
 ## The service or DI container
+
+
 
 
 
