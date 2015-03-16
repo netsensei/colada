@@ -454,6 +454,11 @@ div.posts-overview > article:nth-child(1) {
   -moz-border-radius: 0.5em;
   border-radius: 0.5em; }
 
+code.ihl {
+  background-color: #49483e;
+  color: #f8f8f2;
+  padding: 0.15em 0.25em; }
+
 @media screen and (min-width: 35em) {
   .pos-left {
     float: left;

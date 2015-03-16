@@ -180,6 +180,12 @@ div.posts-overview > article:nth-child(1) {
   }
 }
 
+code.ihl {
+  background-color: #49483e;
+  color: #f8f8f2;
+  padding: 0.15em 0.25em;
+}
+
 .pos-left {
   @include media($breakpoint_1) {
     float: left;
