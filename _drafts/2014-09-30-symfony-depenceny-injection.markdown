@@ -148,15 +148,62 @@ $main->run();
 ?>
 {% endhighlight php %}
 
-The comments should be self explanatory. Note that the code is going to load of a file called <code class="ihl">services.yml</code> which can found in the <code class="ihl">config/</code> folder. This file does two specific things:
+The comments should be self explanatory. Note that the code is going to load of a file called <code class="ihl">services.yml</code> which can found in the <code class="ihl">app/config</code> folder. This file does two specific things:
 
 * It registers all the project specific classes
 * It defines all the classes/libraries these classes depend on.
 
 The other noteworthy thing are the last two lines. First, an instance of the <code class="ihl">airlines.main</code> service, which is defined in the YAML file, is being instantiated, and then its' <code class="ihl">run()</code> method is invoked which will set the entire application in motion.
 
-## The service or DI container
+## Defining dependencies between components
 
+Let's take a look at that YAML file. From the project root, create a new folder and add the <code class="ihl">services.yml</code> file.
+
+{% highlight bash %}
+mkdir app/config
+touch app/config/services.yml
+{% endhighlight bash %}
+
+Now let's add this into the file:
+
+{% highlight yaml %}
+services:
+  airlines.main:
+    class: Colada\Airlines\Main
+    arguments: ['@console.application', '@airlines.airlines']
+  airlines.airlines:
+    class: Colada\Airlines\Airlines
+    calls:
+      - [setHttpClient, ['@guzzle.client']]
+  console.application:
+    class: Symfony\Component\Console\Application
+  guzzle.client:
+    class: Guzzle\Http\Client
+{% endhighlight yaml %}
+
+This YAML structure represents the internal wiring of our application. It defines which classes should be instantiated and how those classes should be injected - via constructor or setter method - into each other. Another way of reading this file is considering it as a graph representation of class dependencies.
+
+The entry point of our application, defined in our <code class="ihl">app/console</code> file, is an instance of type <code class="ihl">Colada\Airlines\Main</code> which takes instances of the <code class="ihl">Symfony\Component\Console\Application</code> and <code class="ihl">Colada\Airlines\Airlines</code> types as constructor arguments. The <code class="ihl">Colada\Airlines\Airlines</code> instance in turn gets an instance of <code class="ihl">Guzzle\Http\Client</code> as a constructor argument.
+
+Now, the beauty of the system is that **you don't need to worry about the entire instantiation juggling part**. The dependency container will automatically takes care of that for you by autoloading all the necessary classes and injecting them into each other on runtime.
+
+Now, we still need the code for the <code class="ihl">airlines.*</code>services. Let's create a new folder for the application specific code.
+
+{% highlight bash %}
+mkdir -p src/Colada/Airlines
+touch src/Colada/Airlines/Main.php
+touch src/Colada/Airlines/Airlines.php
+{% endhighlight bash %}
+
+Then copy the code from the [Airlines.php](https://github.com/netsensei/airlines/blob/master/src/Colada/Airlines/Airlines.php) and [Main.php](https://github.com/netsensei/airlines/blob/master/src/Colada/Airlines/Main.php) files on Github and paste it into those files.
+
+## The dependency injection container
+
+Now, resolving the entire dependency tree at runtime would be too expensive. Instead, we'll instantiate a specific PHP object which stores and manages all the instances based off a class which has all the dependencies hard coded.
+
+This is called the container.
+
+In simple applications, you could easily write your own container class. in larger applications, generating the code based on a configuration file is far more efficient approach.
 
 
 
