@@ -11,6 +11,10 @@ module.exports = function (grunt) {
       css : {
         src: 'css/**',
         dest: '_site/'
+      },
+      js : {
+        src: 'js/scripts.gen.js',
+        dest: '_site/'
       }
     },
 
@@ -47,6 +51,18 @@ module.exports = function (grunt) {
       }
     },
 
+    uglify: {
+      dev: {
+        options: {
+          mangle: true,
+          compress: true
+        },
+        files: {
+          './js/scripts.gen.js': ['./js/jquery.min.js', './js/jquery.fitvids.js', './js/scripts.js', '!./js/*.gen.js']
+        }
+      }
+    },
+
     watch: {
       options: {
         livereload: true
@@ -57,7 +73,11 @@ module.exports = function (grunt) {
       },
       sass: {
         files: ['./sass/**/*.scss'],
-        tasks: ['sassCopy']
+        tasks: ['sassGenerate']
+      },
+      js: {
+        files: ['./js/**.js', '!./js/*.gen.js'],
+        tasks: ['jsGenerate']
       }
     },
 
@@ -77,11 +97,13 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-sass');
 
   // Define a compass compile & copy task for livereload
-  grunt.registerTask('sassCopy', ['sass:dev', 'copy:css']);
+  grunt.registerTask('sassGenerate', ['sass:dev', 'copy:css']);
+  grunt.registerTask('jsGenerate', ['uglify:dev', 'copy:js']);
   grunt.registerTask('server', ['connect:server', 'watch']);
 
   // Default task.
