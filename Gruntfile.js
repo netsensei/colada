@@ -17,6 +17,10 @@ module.exports = function (grunt) {
       js : {
         src: 'js/scripts.gen.js',
         dest: '_site/'
+      },
+      js : {
+        src: 'js/scripts.gen.js',
+        dest: '_site/'
       }
     },
 
