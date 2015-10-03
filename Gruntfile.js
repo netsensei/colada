@@ -9,12 +9,14 @@ module.exports = function (grunt) {
 
     copy: {
       css : {
-        src: 'css/**',
-        dest: '_site/'
+        expand: true,
+        cwd: 'css',
+        src: ['**'],
+        dest: '_site/css/'
       },
       js : {
-	src: 'js/scripts.gen.js',
-	dest: '_site/'
+        src: 'js/scripts.gen.js',
+        dest: '_site/'
       }
     },
 
@@ -53,13 +55,13 @@ module.exports = function (grunt) {
 
     uglify: {
       dev: {
-	options: {
-	  mangle: true,
-	  compress: true
-	},
-	files: {
-	  './js/scripts.gen.js': ['./js/jquery.min.js', './js/jquery.fitvids.js', './js/scripts.js', '!./js/*.gen.js']
-	}
+        options: {
+          mangle: true,
+          compress: true
+        },
+        files: {
+          './js/scripts.gen.js': ['./js/jquery.min.js', './js/jquery.fitvids.js', './js/scripts.js', '!./js/*.gen.js']
+        }
       }
     },
 
@@ -73,11 +75,11 @@ module.exports = function (grunt) {
       },
       sass: {
         files: ['./sass/**/*.scss'],
-	tasks: ['sassGenerate']
+        tasks: ['sassGenerate']
       },
       js: {
-	files: ['./js/**.js', '!./js/*.gen.js'],
-	tasks: ['jsGenerate']
+        files: ['./js/**.js', '!./js/*.gen.js'],
+        tasks: ['jsGenerate']
       }
     },
 
