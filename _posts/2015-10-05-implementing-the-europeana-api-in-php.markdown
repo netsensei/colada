@@ -17,7 +17,7 @@ In march, I attended an [Europeana Tech](http://pro.europeana.eu/structure/europ
 
 ## The idea
 
-I noticed that a modern, versatile integration of the API in PHP wasn't readily available. So, after some deliberation, I decided to embark on writing the necessary tools as a side project and releasing them under an open source license.
+I noticed that a modern, versatile integration of the API in PHP wasn't readily available. [This project](https://github.com/dan-nl/europeana-api) makes a fair attempt, but lacks documentation, unit tests and publication via [packagist](https://packagist.org/). So, after some deliberation, I decided to embark on writing the necessary tools as a side project and releasing them under an open source license.
 
 The project would consist of two phases. First, I'd focus on writing a generic API library in PHP. It would contain a set of classes and functions which abstracts all the boilerplate of dealing with a REST API away. The library should be heavily geared towards reusability: write once, use many times. Using the library, a developer should only have to focus on building application specific functionality instead of having to figure out how to communicate with the API.
 
