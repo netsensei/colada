@@ -58,11 +58,11 @@ Currently, the last project got released on Github.
 
 I developed an [installed resource](http://docs.thedatatank.com/5.6/installed) which queries limited datasets from the Europeana API and publishes them as JSON, XML or PHP. The Datatank acts as a proxy for the Europeana API and allows you to set up a custom API point for your own specific purposes. The current state of the project enables data providers to create dedicated endpoints through which they can open up their specific datasets.
 
-What are the benefits of this approach? This lower the bar for targetted reuse of Euroepana data. It allows data providers to easily isolate and publish specific subsets via their own endpoint. The burden of communicating with the Europeana API, shifts from consumer applications to the Datatank proxy. Removing that kind of complexity makes it easier to build case-specific applications.
+What are the benefits of this approach? This lower the bar for targetted reuse of Europeana data. It allows data providers to easily isolate and publish specific subsets via their own endpoint. The burden of communicating with the Europeana API, shifts from consumer applications to The Datatank proxy. Removing that kind of complexity makes it easier to build case-specific applications.
 
 As requested datasets are cached by The Datatank, client applications are less dependent on the availability of the Europeana API itself: if the endpoint is temporarily unavailable, the data can still be requested from The Datatank cache. Of course, application consumers should be wary of outdated cached data, if ingests with updated records happen at high frequency intervals at the Europeana side.
 
-The code and acompanying documentation can be found on [Github at https://github.com/netsensei/TdtEuropeana](https://github.com/netsensei/TdtEuropeana).
+The code and accompanying documentation can be found on [Github at https://github.com/netsensei/TdtEuropeana](https://github.com/netsensei/TdtEuropeana).
 
 ## What's next?
 
