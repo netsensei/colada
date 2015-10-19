@@ -56,9 +56,11 @@ Currently, the last project got released on Github.
 
 [The DataTank](http://thedatatank.com) is a RESTful data management system written in PHP5. It acts as a customised datahub that enables publishing several data formats into web readable formats. In other words: The Datatank allows you to create your own REST API endpoints. The application can be extended with custom readers called installed resources.
 
-I developped an [installed resource](http://docs.thedatatank.com/5.6/installed) which queries limited datasets from the Europeana API and publishes them as JSON, XML or PHP. The Datatank acts as a proxy for the Europeana API and allows you to set up a custom API point for your own specific purposes.
+I developped an [installed resource](http://docs.thedatatank.com/5.6/installed) which queries limited datasets from the Europeana API and publishes them as JSON, XML or PHP. The Datatank acts as a proxy for the Europeana API and allows you to set up a custom API point for your own specific purposes. The current state of the project enables data providers to create dedicated endpoints through which they can open up their specific datasets.
 
-The current state of the project enables data providers to create dedicated endpoints through which they can open up their specific datasets. As requested datasets is cached by The Datatank, client applications are less dependent on the availability of the Europeana API itself: if the endpoint is temporarily unavailable, the data can still be requested from The Datatank cache. Of course, application consumers should be wary of outdated cached data, if ingests with updated records happen at high frequency intervals at the Europeana side.
+What are the benefits of this approach? This lower the bar for targetted reuse of Euroepana data. It allows data providers to easily isolate and publish specific subsets via their own endpoint. The burden of communicating with the Europeana API, shifts from consumer applications to the Datatank proxy. Removing that kind of complexity makes it easier to build case-specific applications.
+
+As requested datasets are cached by The Datatank, client applications are less dependent on the availability of the Europeana API itself: if the endpoint is temporarily unavailable, the data can still be requested from The Datatank cache. Of course, application consumers should be wary of outdated cached data, if ingests with updated records happen at high frequency intervals at the Europeana side.
 
 The code and acompanying documentation can be found on [Github at https://github.com/netsensei/TdtEuropeana](https://github.com/netsensei/TdtEuropeana).
 
