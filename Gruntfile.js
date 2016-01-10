@@ -9,7 +9,13 @@ module.exports = function (grunt) {
 
     copy: {
       css : {
-        src: 'css/**',
+        expand: true,
+        cwd: 'css',
+        src: ['**'],
+        dest: '_site/css/'
+      },
+      js : {
+        src: 'js/scripts.gen.js',
         dest: '_site/'
       },
       js : {
