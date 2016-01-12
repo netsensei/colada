@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Decoupled Drupal: a couple of considerations"
-date:   2016-01-10 20:00:00
+date:   2016-01-12 10:00:00
 categories: Drupal
 comments: false
 ---
