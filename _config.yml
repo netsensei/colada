@@ -2,6 +2,7 @@ highlighter: pygments
 markdown:    rdiscount
 permalink:   /:title.html
 
+gems: [jekyll-paginate]
 paginate: 10
 paginate_path: "/page:num"
 
