@@ -3,7 +3,7 @@ layout: post
 title:  "Decoupled Drupal: a couple of considerations"
 date:   2016-01-12 10:00:00
 categories: Drupal
-comments: false
+comments: true
 ---
 Over the past few months, Dries has posted a series of blogposts about decoupled Drupal culminating in [Selecting a client-side framework for Drupal](buytaert.net/selecting-a-client-side-framework-for-drupal). He explores the impact of decoupling frontend from the backend architecture alltogether via Javascript and webservices. Here are a few of my own thoughts on the subject.
 
