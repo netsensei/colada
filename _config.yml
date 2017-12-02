@@ -11,6 +11,6 @@ paginate_path: "/page:num"
 
 name: Colada
 description: "Regular dispatches covering Tech and Web development brought by Matthias Vandermaesen."
-root_desc: "colada.be - Dispatches on Tech and Web development"
+root_desc: "colada.be - Dispatches from a digital architect"
 
 exclude: ['README.md', 'config.rb', 'node_modules', 'Gruntfile.js', 'package.json', 'CNAME', 'Gemfile.lock', 'Gemfile', 'sass']
