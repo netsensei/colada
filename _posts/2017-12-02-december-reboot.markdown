@@ -6,14 +6,13 @@ categories: advent
 comments: true
 ---
 So, December has kicked off. It's a nice opportunity to do a reboot as we 
-approach the end of the year. I'm active in the field of GLAM institutions. 
-Galleries, libraries, archives and Museums. As a digital specialist, I'm 
-involved in the ongoing digitisation or automatisation of processes within 
-these organisations. Coming from the private sector, I apply my experience 
-of realising digital projects of various scale and size for a wide variety of 
-clients, on a daily basis on an operational level. Doing a blog series about 
-the experience of these past few years has been on a my wish list for a while 
-now.
+approach the end of the year. I'm active in the field of [GLAM](https://en.wikipedia.org/wiki/GLAM_(industry_sector)) institutions. Galleries, libraries, archives and Museums. As 
+a digital specialist, I'm involved in the ongoing digitisation or 
+automatisation of processes within these organisations. Coming from the 
+private sector, I apply my experience of realising digital projects of various 
+scale and size for a wide variety of clients, on a daily basis on an 
+operational level. Doing a blog series about the experience of these past few 
+years has been on a my wish list for a while now.
 
 When we're talking about digital within the GLAM domain, the discussion tends 
 to focus on so-called digital collections and the challenges associated with 
