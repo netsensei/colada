@@ -24,13 +24,13 @@ we define success factors? What are suitable KPI's? How can we account for the
 investments of significant budgets in digital projects which have limited 
 lifetime before they become obsolete?
 
-So far, I acknowledge many of the challenges I have faced to be 
-[wicked problems](https://en.wikipedia.org/wiki/Wicked_problem). Often there 
-are no 'absolute' answer and is a self-defined framework of values and 
-principles the primary foundation in validating and choosing a suitable 
-strategy when going forward. This also implies that strategies and protocols 
-have to evolve as GLAM institutions keep redefining their role within an ever 
-changing societal context.
+So far, experience has taught me to perceive many of the challenges I have 
+faced to be [wicked problems](https://en.wikipedia.org/wiki/Wicked_problem). 
+Often there are no 'absolute' answer and is a self-defined framework of values 
+and guiding principles the primary foundation in validating and choosing a 
+suitable strategy when going forward. This also implies that strategies and 
+protocols have to evolve as GLAM institutions keep redefining their role within 
+an ever changing societal context.
 
 Sharing knowledge, experiences and tools are absolutely crucial if we want to 
 be able to preserve and open up (digital) collections for generations to come.
