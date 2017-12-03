@@ -16,24 +16,28 @@ blog series about the experience of these past few years has been on a my wish
 list for a while now.
 
 When we're talking about digital within the GLAM domain, the discussion tends 
-to focus on so-called digital collections and the challenges associated with 
-these collections. Questions about preservation and dissemination of digital 
-born or digitized materials come in the limelight. Finding clear cut answers 
+to focus on digital collections and the challenges associated with these 
+collections. Questions about preservation and dissemination of digital 
+born or digitized materials come to the limelight. Finding clear cut answers 
 isn't straightforward and often raises more questions. Where to start? How do 
 we define success factors? What are suitable KPI's? How can we account for the 
 investments of significant budgets in digital projects which have limited 
 lifetime before they become obsolete?
 
-So far, experience has taught me to perceive many of the challenges I have 
-faced to be [wicked problems](https://en.wikipedia.org/wiki/Wicked_problem). 
-Often there are no 'absolute' answer and is a self-defined framework of values 
-and guiding principles the primary foundation in validating and choosing a 
-suitable strategy when going forward. This also implies that strategies and 
-protocols have to evolve as GLAM institutions keep redefining their role within 
-an ever changing societal context.
+Many of the challenges we face are [wicked problems](https://en.wikipedia.org/wiki/Wicked_problem). 
+Often there is no 'absolute' answer or 'right' solution available, leaving us 
+to our own devices. A self-defined framework of values and guiding principles 
+is our primary foundation in validating and choosing a suitable strategy when 
+going forward. The uncertainty surrounding the sustainability and affordability 
+of the technologies and practices we have to decide on easily stiffle us into 
+an apprehensive position. 
 
 Sharing knowledge, experiences and tools are absolutely crucial if we want to 
-be able to preserve and open up (digital) collections for generations to come.
+avoid falling into a deadlock. Of equal importance is acknowledging that 
+strategies and protocols have to evolve as GLAM institutions keep redefining 
+their role within an ever changing societal context. Even so, our efforts 
+always serve our mission of preserving and opening up (digital) collections for 
+generations to come.
 
 What am I going to blog about? Over the past few years, I've been mainly 
 involved in designing and building digital architectures for sharing and 
