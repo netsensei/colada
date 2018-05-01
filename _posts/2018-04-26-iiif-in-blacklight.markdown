@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Adding IIIF support to your Project Blacklight catalog"
-date:   2018-04-25 17:30:00
+date:   2018-05-1 14:00:00
 categories: iiif
 comments: true
 ---
