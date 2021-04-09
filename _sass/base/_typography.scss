@@ -3,85 +3,79 @@
  */
 
 @font-face {
-  font-family: EntypoRegular;
-  src: url('../../../fonts/entypo/entypo.eot') format('embedded-opentype');
+  font-family: 'RobotoSlab-Regular';
+  src: url('../fonts/RobotoSlab-Regular.ttf') format('truetype');
 }
+
 @font-face {
-  font-family: FontAwesome;
-  src: url('../../../fonts/fontAwesome/fontAwesome.eot') format('embedded-opentype');
-}
-@font-face {
-  font-family: Raleway;
-  src: url('../../../fonts/raleway/raleway.eot') format('embedded-opentype');
+  font-family: 'IBMPlexMono-Regular';
+  src: url('../fonts/IBMPlexMono-Regular.ttf') format('truetype');
 }
 
-// 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
-//    http://clagnut.com/blog/348/#c790
-// 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
-//    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
-html {
-  font-size: 100% * ($base-font-size / 16px); /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-  -ms-text-size-adjust: 100%; /* 2 */
-}
+$font-family-sans-serif: "RobotoSlab-Regular", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:  "IBMPlexMono-Regular", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;;
 
-// Addresses font-family inconsistency between 'textarea' and other form elements.
-html,
-button,
-input,
-select,
-textarea {
-  font-family: $base-font-family;
-}
+$font-size-root: 1.2rem;
 
-/* Line-heights */
+$headings-font-family: $font-family-monospace;
 
-body {
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-}
+// // Addresses font-family inconsistency between 'textarea' and other form elements.
+// html,
+// button,
+// input,
+// select,
+// textarea {
+//   font-family:
+// }
 
-h1 {
-  margin: $h1_margin;
-  font-size: $h1_font_size;
-}
+// /* Line-heights */
 
-h2 {
-  margin: $h2_margin;
-  font-size: $h2_font_size;
-}
+// body {
+//   font-size: $base-font-size;
+//   line-height: $base-line-height;
+// }
 
-h3 {
-  margin: $h3_margin;
-  font-size: $h3_font_size;
-}
+// h1 {
+//   margin: $h1_margin;
+//   font-size: $h1_font_size;
+// }
 
-h4 {
-  margin: $h4_margin;
-  font-size: $h4_font_size;
-}
+// h2 {
+//   margin: $h2_margin;
+//   font-size: $h2_font_size;
+// }
 
-h5 {
-  margin: $h5_margin;
-  font-size: $h5_font_size;
-}
+// h3 {
+//   margin: $h3_margin;
+//   font-size: $h3_font_size;
+// }
 
-h6 {
-  margin: $h6_margin;
-  font-size: $h6_font_size;
-}
+// h4 {
+//   margin: $h4_margin;
+//   font-size: $h4_font_size;
+// }
 
-/* Fonts */
+// h5 {
+//   margin: $h5_margin;
+//   font-size: $h5_font_size;
+// }
 
-h1 {
-  font-family: Raleway, Arial, Helvetica, sans-serif;
-}
+// h6 {
+//   margin: $h6_margin;
+//   font-size: $h6_font_size;
+// }
 
-/* colors */
+// /* Fonts */
 
-a {
-  /* @include link-colors(#e59400, #e59400, #b27300, #7f5200, #7f5200); */
-  // @include link-colors(#b27300, #e59400, #e59400, #7f5200, #7f5200);
-  text-decoration: none;
-}
+// h1 {
+//   font-family: Raleway, Arial, Helvetica, sans-serif;
+// }
+
+// /* colors */
+
+// a {
+//   /* @include link-colors(#e59400, #e59400, #b27300, #7f5200, #7f5200); */
+//   // @include link-colors(#b27300, #e59400, #e59400, #7f5200, #7f5200);
+//   text-decoration: none;
+// }
 
