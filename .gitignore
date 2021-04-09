@@ -8,6 +8,7 @@ nbproject
 .project
 .settings
 .idea
+.vscode
 
 # Ignore sass-cache files.
 *.sass-cache*

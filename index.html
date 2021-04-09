@@ -2,41 +2,39 @@
 layout: default
 ---
 
-<div class="home">
+<div class="posts-overview">
 
-  <div class="posts-overview">
+  <!-- This loops through the paginated posts -->
+  {% for post in paginator.posts %}
+    <article class="post format-excerpt">
 
-    <!-- This loops through the paginated posts -->
-    {% for post in paginator.posts %}
-      <article class="post format-excerpt">
-
-        <header>
-          <div class="entry-meta">{{ post.date | date_to_long_string }}</div>
-          <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
-
-        </header>
-
-        <div class="entry-content">
-          {{ post.excerpt }}
+      <header>
+        <div class="entry-meta">
+          <time class="published" datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
         </div>
+        <h2><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
 
-      </article>
-    {% endfor %}
+      </header>
 
-    <!-- Pagination links -->
-    {% if paginator.total_pages > 1 %}
-    <div class="pagination">
-      {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-      {% endif %}
+      <div class="entry-content">
+        {{ post.excerpt }}
+      </div>
 
-      {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-      {% endif %}
-    </div>
+    </article>
+  {% endfor %}
+
+  <!-- Pagination links -->
+  {% if paginator.total_pages > 1 %}
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
     {% endif %}
 
-
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+    {% endif %}
   </div>
+  {% endif %}
+
 
 </div>

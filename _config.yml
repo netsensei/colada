@@ -1,16 +1,24 @@
+encoding: utf-8
+
 highlighter: pygments
 markdown:    kramdown
+markdown_ext: 'markdown,mkdown,mkdn,mkd,md'
+
 permalink:   /:title.html
 
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
+title: Matthias Vandermaesen
+description: "Dispatches from my digital life."
 
-paginate: 10
-paginate_path: "/page:num"
+paginate: 5
+paginate_path: "/page/:num"
 
-name: Colada
-description: "Regular dispatches covering Tech and Web development brought by Matthias Vandermaesen."
-root_desc: "colada.be - Dispatches from a digital architect"
+exclude:
+  - README.md
+  - CNAME
+  - Gemfile.lock
+  - Gemfile
+keep_files:
+  - .git
 
-exclude: ['README.md', 'config.rb', 'node_modules', 'Gruntfile.js', 'package.json', 'CNAME', 'Gemfile.lock', 'Gemfile', 'sass']
+defaults:
+  css: /css/style.css
