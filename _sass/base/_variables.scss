@@ -2,8 +2,50 @@
  * Global variables
  */
 
+ $grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px
+);
+
+$container-max-widths: (
+  sm: 420px,
+  md: 720px,
+  lg: 960px
+);
+
 
 // Coloring
+
+// Gruvbox colors
+// https://github.com/morhetz/gruvbox
+
+// $min-contrast-ratio: 2;
+
+// $white:    #fff !default; // 229 fg0
+// $gray-100: #ebdbb2 !default; // 223 fg1
+// $gray-200: #d5c4a1 !default; // 250 fg2
+// $gray-300: #bdae93 !default; // 248 fg3
+// $gray-400: #a89984 !default; // 246 fg4
+// $gray-500: #928374 !default; // 245 gray
+// $gray-600: #7c6f64 !default; // 243 bg4
+// $gray-700: #665c54 !default; // 241 bg3
+// $gray-800: #504945 !default; // 239 bg2
+// $gray-900: #3c3836 !default; // 237 bg1
+// $black:    #282828 !default; // 235 bg0
+
+$blue:    #458588 !default; // 66 blue
+$indigo:  #b16286 !default; // 132 purple
+$purple:  #d3869b !default; // 175 purple
+$pink:    #fb4934 !default; // 167 red
+$red:     #cc241d !default; // 124 red
+$orange:  #d65d0e !default; // 166 orange
+$yellow:  #fabd2f !default; // 214 yellow
+$green:   #98971a !default; // 106 green
+$teal:    #b8bb26 !default; // 142 green
+$cyan:    #83a598 !default; // 109 blue
+
 
 // $background: #ecebe6;
 // $color: #000;
