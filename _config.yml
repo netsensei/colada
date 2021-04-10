@@ -1,6 +1,5 @@
 encoding: utf-8
 
-highlighter: pygments
 markdown:    kramdown
 markdown_ext: 'markdown,mkdown,mkdn,mkd,md'
 
@@ -22,3 +21,18 @@ keep_files:
 
 defaults:
   css: /css/style.css
+
+lsi: false
+safe: true
+source: .
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+

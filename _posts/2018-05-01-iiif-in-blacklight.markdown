@@ -110,14 +110,14 @@ Let's break down each step.
 
 Let's add the riiif gem to our application:
 
-```
+```bash
 $ bundle add riiif
 $ bundle install
 ```
 
 Now, we're going to add these lines to our `/config/routes.rb` file:
 
-```
+```ruby
 ALLOW_ANYTHING_BUT_SLASHES = /[^\/]+/
 
 constraints id: ALLOW_ANYTHING_BUT_SLASHES, rotation: Riiif::Routes::ALLOW_DOTS, size: Riiif::Routes::SIZES do
@@ -147,7 +147,7 @@ serve IIIF manifest data. We'll get back to that in the next part.
 Next up is letting riiif know where the images are stored. Create a new 
 initializer in `/config/initializers/riiif.rb`. Add these lines:
 
-```
+```ruby
 Riiif::Image.file_resolver = Riiif::HTTPFileResolver.new
 
 Riiif::Image.file_resolver.id_to_uri = lambda do |id|
@@ -191,13 +191,13 @@ Remember the extra manifest route we added in `/config/routes.rb`? We're going
 to create a controller and action associated with this route that will take c
 are of generating our manifest file.
 
-```
+```bash
 $ rails generate controller Images manifest
 ```
 
 This creates a new file `/app/controllers/images_controller.rb`:
 
-```
+```ruby
 class ImagesController < ApplicationController
   def manifest
   end
@@ -206,7 +206,7 @@ end
 
 Next up, we'll install the presentation-iiif gem:
 
-```
+```bash
 $ bundle add iiif-presentation
 $ bundle install
 ```
@@ -214,7 +214,7 @@ $ bundle install
 So, now we're set that to implement the manifest action in the controller. Our 
 first step is to associate our controller with Blacklight:
 
-```
+```ruby
 class ImagesController < ApplicationController
   include Blacklight::Catalog
 
@@ -226,7 +226,7 @@ end
 This makes the entire Blacklight API available in our custom controller. We'll 
 use that to fetch data from the active Solr document. Like this:
 
-```
+```ruby
 class ImagesController < ApplicationController
   include Blacklight::Catalog
 
@@ -244,7 +244,7 @@ to fetch descriptive data from our Solr document and use that in our manifest.
 Without much further ado, the next listing shows an minimum implementation of 
 the controller action:
 
-```
+```ruby
 class ImagesController < ApplicationController
     include Blacklight::Catalog
 
@@ -379,7 +379,7 @@ Viewer or Leaflet.
 
 Let's install the mirador rails gem:
 
-```
+```bash
 $ bundle add mirador_rails
 $ bundle install
 ```
@@ -389,19 +389,19 @@ Sprockets so we only have to add the correct lines in our `app/assets` files.
 
 Javascript: `app/assets/application.js` 
 
-```
+```javascript
 //= require mirador
 ```
 
 CSS: `app/assets/application.css` 
 
-```
+```css
 *= require mirador
 ```
 
 We'll also need to add a few lines in our `app/config/routes.rb` file:
 
-```
+```ruby
 Rails.application.routes.draw do
   ...
   mount MiradorRails::Engine, at: MiradorRails::Engine.locales_mount_path
@@ -419,7 +419,7 @@ Project Blacklight gem and replace it with our own version.
 
 The default code for Project Blacklight 6.11 in that file looks like this:
 
-```
+```erb
 <% doc_presenter = show_presenter(document) %>
 <%# default partial to display solr document fields in catalog show view -%>
 <dl class="dl-horizontal  dl-invert">
@@ -436,7 +436,7 @@ The default code for Project Blacklight 6.11 in that file looks like this:
 What we'll do is mix in the `mirador_tag()` template code and add the
 necessary configuration to wire everything up. This is how it should look:
 
-```
+```erb
 <% doc_presenter = show_presenter(document) %>
 
 <div class="mirador">
@@ -479,7 +479,7 @@ We're not entirely finished yet. You've noticed the `render_iiif_manifest_url`
 function. This is a helper function we need to create in `app/helpers/application_helper.rb`.
 Like this:
 
-```
+```ruby
 module ApplicationHelper
   def render_iiif_manifest_url(document=@document, options = {})
     isbn = document.fetch(:isbn_t)
@@ -507,7 +507,7 @@ We're not finished yet, our final step is to add a thumbnail per record on the
 search results pages. So, we'll start by adding a new method to `ApplicationHelper`. 
 In `app/helpers/application_helper.rb`:
 
-```
+```ruby
 module ApplicationHelper
   def render_iiif_manifest_url(document=@document, options = {})
     isbn = document.fetch(:isbn_t)
@@ -530,7 +530,7 @@ Adding a thumbnail is easy. Project Blacklight provides an optional template.
 Let's create a new file: `app/views/catalog/_thumbnail_default.html.erb` and add
 this code:
 
-```
+```erb
 <%= image_tag iiif_thumbnail_url_field(document), class: "thumbnail" %>
 ```
 
@@ -541,7 +541,7 @@ The thumbnail and the index metadata aren't visually aligned. The Project
 Blacklight interface is build with the [Bootstrap framework](https://getbootstrap.com/), 
 so we can leverage that to fix the layout:
 
-```
+```erb
 <div class="documentBody row col-md-12">
   <div class="col-md-3 index-thumbnail">
     <%= image_tag iiif_thumbnail_url_field(document), class: "thumbnail" %>
@@ -553,7 +553,7 @@ both the thumbnail and the record metadata. So, let's also override the latter
 template that includes these metadata. Create a new file in 
 `app/views/catalog/_index_default.html.erb`. Now add these lines:
 
-```
+```erb
     <% doc_presenter = index_presenter(document) %> 
     <%# default partial to display solr document fields in catalog index view -%>
     <dl class="document-metadata dl-horizontal dl-invert col-md-9">
