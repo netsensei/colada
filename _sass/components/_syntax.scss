@@ -1,5 +1,12 @@
-figure.highlight {
-    padding: 1rem
+.highlighter-rouge {
+    margin: 1rem;
+}
+.highlighter-rouge > .highlight {
+    padding: 1rem;
+}
+
+pre.highlight {
+    margin-bottom: 0;
 }
 
 // https://github.com/daveyarwood/gruvbox-pygments
