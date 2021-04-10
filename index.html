@@ -5,23 +5,18 @@ layout: default
 <div class="posts-overview">
 
   <!-- This loops through the paginated posts -->
+
+  <ul class="list-unstyled">
   {% for post in paginator.posts %}
-    <article class="post format-excerpt">
 
-      <header>
-        <div class="entry-meta">
-          <time class="published" datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
-        </div>
-        <h2><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-
-      </header>
-
-      <div class="entry-content">
-        {{ post.excerpt }}
-      </div>
-
-    </article>
+    <li class="list-item entry d-md-flex justify-content-md-between mb-2">
+        <time class="published order-md-2" datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
+        <span class="title d-block order-md-1">
+            <a href="{{ post.url }}" title="{{ post.title }}" class="u-url">{{ post.title }}</a>
+        </span>
+    </li>
   {% endfor %}
+  </ul>
 
   <!-- Pagination links -->
   {% if paginator.total_pages > 1 %}
@@ -35,6 +30,5 @@ layout: default
     {% endif %}
   </div>
   {% endif %}
-
 
 </div>
