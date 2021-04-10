@@ -12,12 +12,9 @@
   src: url('../fonts/IBMPlexMono-Regular.ttf') format('truetype');
 }
 
-$font-family-sans-serif: "RobotoSlab-Regular", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:  "IBMPlexMono-Regular", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;;
+// $font-family-monospace:  , SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;;
 
-$font-size-root: 1.2rem;
-
-$headings-font-family: $font-family-monospace;
+$headings-font-family: "IBMPlexMono-Regular";
 
 // // Addresses font-family inconsistency between 'textarea' and other form elements.
 // html,
