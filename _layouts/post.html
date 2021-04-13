@@ -2,13 +2,11 @@
 layout: default
 ---
 
-<article class="format-detail container-md">
+<article class="container-md">
     <header>
-      <div class="entry-meta">{{ page.date | date_to_long_string }}</div>
-      <h2>{{ page.title }}</h2>
+      <time class="published" datetime="{{ page.date }}">{{ page.date | date_to_long_string }}</time>
+      <h1 class="post-title">{{ page.title }}</h1>
     </header>
 
-    <div class="entry-content">
-      {{ content }}
-    </div>
+    {{ content }}
 </article>

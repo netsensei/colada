@@ -2,15 +2,25 @@
 layout: default
 ---
 
-<div class="posts-overview">
+<section class="introduction">
+  <h2>Hi!</h2>
 
-  <!-- This loops through the paginated posts -->
+  <p class="lead">I'm <a href="/about.html">Matthias Vandermaesen</a>. I'm a software architect with a penchant
+  for Digital Culture, Open Source and the Open Web. I document my digital life on this website.
+  I share code on <a href="https://github.com/netsensei">Github</a> and I toot from time to time at <a href="https://mastodon.social">@netsensei@mastodon.social</a>.
+
+</p>
+</section>
+
+<section class="posts-overview">
+
+  <h2>Writings</h2>
 
   <ul class="list-unstyled">
   {% for post in paginator.posts %}
 
     <li class="list-item entry d-md-flex justify-content-md-between mb-2">
-        <time class="published order-md-2" datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
+        <time class="published order-md-2" datetime="{{ post.date }}">{{ post.date | date_to_long_string }}</time>
         <span class="title d-block order-md-1">
             <a href="{{ post.url }}" title="{{ post.title }}" class="u-url">{{ post.title }}</a>
         </span>
@@ -18,7 +28,6 @@ layout: default
   {% endfor %}
   </ul>
 
-  <!-- Pagination links -->
   {% if paginator.total_pages > 1 %}
   <div class="pagination">
     {% if paginator.previous_page %}
@@ -31,4 +40,4 @@ layout: default
   </div>
   {% endif %}
 
-</div>
+</section>
