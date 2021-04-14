@@ -29,7 +29,7 @@ On a free saturday afternoon a few weeks ago, I followed [Shama's 10 minute tuto
 
 First thing I hacked together was my own terrain generator. The tutorial uses the [perlin-terrain-generator](https://github.com/maxogden/voxel-perlin-terrain) which uses the Perlin noise algorithm to generate a basic heightmap. I tinkered with the code to get a feel for how things work and finally came up with my own extremely expensive flat terrain generator.
 
-<img src="/assets/media/voxeljs.png" alt="Voxel JS" />
+<img src="/assets/media/voxeljs.png" class="img-fluid" alt="Voxel JS" />
 
 At the moment, I'm toying with sprites and sprite support. It was surprisingly easy to wield the [ThreeJS SpriteMaterial class](http://threejs.org/docs/api/materials/SpriteMaterial.html) and get it to work with VoxelJS. Writing an optimal implementation which includes atlas support, is the real challenge here.
 

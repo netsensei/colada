@@ -47,12 +47,12 @@ through my personal catalog.
 
 On the results page, I would like to see a thumbnail next to each record:
 
-<img src="/assets/media/iiif-blacklight-index.png" alt="IIIF Blacklight index" />
+<img src="/assets/media/iiif-blacklight-index.png" alt="IIIF Blacklight index" class="img-fluid" />
 
 On an individual page, I would like to add the Mirador Viewer so I can see the
 cover in a zoom tool:
 
-<img src="/assets/media/iiif-blacklight-detail.png" alt="IIIF Blacklight detail" />
+<img src="/assets/media/iiif-blacklight-detail.png" alt="IIIF Blacklight detail" class="img-fluid" />
 
 ## Before we start
 
