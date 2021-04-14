@@ -2,8 +2,7 @@
 layout: post
 title:  "December reboot"
 date:   2017-12-02 17:30:00
-categories: advent
-comments: true
+published: false
 ---
 So, December has kicked off. It's a nice opportunity to do a reboot as we 
 approach the end of the year. I'm active in the field of [GLAM](https://en.wikipedia.org/wiki/GLAM_(industry_sector)) 
