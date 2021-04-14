@@ -11,9 +11,7 @@ Some time ago, I needed a flat list of identification numbers, object titles and
 
 I had very limited time, so breaking open my coding toolkit and hacking an entire API client implementation was definitely a no-go. I had to approach the problem more directly.
 
-So, how did I do it? I recently published a new screencast where I demonstrate how I tackled this problem:
-
-<iframe width="560" height="315" src="//www.youtube.com/embed/7A_B7ryHqYk" frameborder="0" allowfullscreen></iframe>
+So, how did I do it? I recently published <a href="https://www.youtube.com/watch?v=7A_B7ryHqYk">a new screencast</a> where I demonstrate how I tackled this problem.
 
 The answer, of course, is using the [XSLT language](https://en.wikipedia.org/wiki/XSLT) to create a transformation stylesheet. An XSLT processor program would convert the XML file to a CSV file based on the mapping and formatting rules I'd define in the stylesheet. Conveniently, OSX comes with a straightforward command line processor called [xsltproc](http://xmlsoft.org/XSLT/xsltproc2.html).
 

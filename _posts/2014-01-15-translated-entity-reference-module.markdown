@@ -17,6 +17,6 @@ Based on a [patch](https://drupal.org/node/1462766) posted in the Entity Referen
 
 In the following screencast, I show you the issue, how the module is used to fix this and explain how I the fix was implemented.
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/HrnWHSr0gSA" frameborder="0" allowfullscreen></iframe>
+<a href="https://www.youtube.com/watch?v=HrnWHSr0gSA">Watch the screencast on YouTube</a>.
 
 I hope this module is useful. Thank you for feedback or contributing patches in the [issue queue](https://drupal.org/project/issues/translated_entityreference).

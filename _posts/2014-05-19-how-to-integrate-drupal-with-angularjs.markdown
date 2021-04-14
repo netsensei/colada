@@ -13,8 +13,7 @@ Earlier this month, I attended a Drupal User Group, hosted at the XIO offices in
 
 I felt that a very introductory screencast that just focusses on the integration itself, would be a great addition. So, without further ado:
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/p3zSQieBIe8" frameborder="0" allowfullscreen></iframe>
-
+<a href="https://www.youtube.com/watch?v=p3zSQieBIe8">Watch the screencast on YouTube</a>.
 
 The gist of this screencast:
 

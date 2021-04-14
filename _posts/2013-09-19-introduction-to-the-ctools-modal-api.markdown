@@ -13,9 +13,7 @@ Javascript/CSS libraries, it's more practical to rely on CTools to get a popup.
 In fact, it's the same API used to create those fancy popup's you see when using
  Panels or the Panels In-Place Editor.
 
-Without further ado:
-
-<iframe width="640" height="480" src="//www.youtube.com/embed/3owC1IlPOQc" frameborder="0" allowfullscreen=""></iframe>
+Without further ado: <a href="https://www.youtube.com/watch?v=3owC1IlPOQc">view the screencast on YouTube</a>.
 
 While I've done the odd screencast in the past, this is the first attempt in a
 long time with proper equipment. Obviously, I'll need to practice to tone down

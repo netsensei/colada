@@ -12,7 +12,6 @@ session up on YouTube and I uploaded the slides themselves to Slideshare.
 I ended up having way more slides then time to cover them all. So, the recording
 ends probably half way. Without further ado:
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/d4F7pUJ0ukk" frameborder="0" allowfullscreen=""></iframe>
+<a href="https://www.youtube.com/watch?v=d4F7pUJ0ukk">View the screencast on YouTube</a>.
 
-And the slides:</p>
-<iframe src="http://www.slideshare.net/slideshow/embed_code/26433274" width="597" height="486" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""> </iframe>
+Find <a href="https://www.slideshare.net/netsensei/drupalcampbe-2013-the-drupal-community-how-to-contribute?ref=http://localhost:4000/">the slides on SlideShare</a>.
