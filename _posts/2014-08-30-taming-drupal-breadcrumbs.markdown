@@ -41,7 +41,7 @@ Here's how you can easily achieve common, minor adjustments:
 
 1. Adding the active menu item to the end of the breadcrumb. This snippet can be found on [api.drupal.org](https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_menu_breadcrumb_alter/7).
 
-{% highlight php %}
+```php
 <?php
 /**
  * Implements hook_breadcrumbs_alter().
@@ -59,11 +59,11 @@ function myproject_menu_breadcrumb_alter(&$active_trail, $item) {
   }
 }
 ?>
-{% endhighlight %}
+```
 
 2. Removing the 'Home' root element from the breadcrumb trail.
 
-{% highlight php %}
+```php
 <?php
 /**
  * Implements hook_breadcrumbs_alter().
@@ -76,11 +76,11 @@ function myproject_menu_breadcrumb_alter(&$active_trail, $item) {
   }
 }
 ?>
-{% endhighlight %}
+```
 
 3. Adding labels or icons before / after the breadcrumbs. Anything visual or non-functional should be added by overriding the theme_breadcrumb function in your theme's template.php.
 
-{% highlight php %}
+```php
 <?php
 /**
  * Overrides theme_breadcrumb
@@ -98,7 +98,7 @@ function mytheme_breadcrumb($variables) {
   }
 }
 ?>
-{% endhighlight %}
+```
 
 ## Common pitfalls
 
@@ -153,7 +153,7 @@ The following snippet might solve just that. Here's how it works:
 5. Add the node path to the end of the adjusted active trail.
 6. Use [menu_set_active_trail](https://api.drupal.org/api/drupal/includes%21menu.inc/function/menu_set_active_trail/7) to save the new trail.
 
-{% highlight php %}
+```php
 <?php
 /**
  * Implements hook_node_view().
@@ -203,7 +203,7 @@ function hook_node_view($node, $view_mode, $langcode) {
   }
 }
 ?>
-{% endhighlight %}
+```
 
 Of course, you can just adapt this snippet. This example implements hook_node_view, but it could be used on other fieldable entity types as well. Provided there is a taxonomy reference field and the term path is available as a menu item.
 

@@ -27,7 +27,7 @@ Get your JQuery toolbelt out. With some search and replace actions in the DOM we
 The Drupal Way
 So, first some code. I'll explain in a bit.
 
-{% highlight php %}
+```php
 <?php
 /**
  * Alter the add to cart form
@@ -148,7 +148,7 @@ function mymodule_form_commerce_cart_add_to_cart_form_alter(&$form, &$form_state
   }
 }
 ?>
-{% endhighlight %}
+```
 
 In essence, I just alter the commerce_cart_add_to_cart_form() function (Part of the Cart (commerce_cart) module and add the commerce price field as an extra element to the form. There are two hurdles I have to take: (i) Retrieving the price from the referenced product entities (ii) Rebuild the price field in such a way that the AJAX dynamics will not break.
 
@@ -159,7 +159,7 @@ Since a hook_form_alter function is context unaware, I had to retrieve the calli
 Next up, I need to attach the price to the form and make it work together with the quantity. It's a two step proces. First, I'll move the quantity into a container. Like this:
 
 
-{% highlight php %}
+```php
 <?php
 // Create a container and move the quantity form field into it
 $quantity = $form['quantity'];
@@ -170,13 +170,13 @@ $form['pricing'] = array(
 );
 $form['pricing']['quantity'] = $quantity;
 ?>
-{% endhighlight %}
+```
 
 There is a slight problem here. The commerce_cart_add_to_cart_form_validate() function assumes the existence of $form['quantity']['#datatype'], but I'm breaking the structure. The validator will start to fail because of that. That's why I've added the expliciet $form['quantity']['#datatype'] = 'integer'; Yes, it's a bit of a hack, but it works. If you *really* want to do it the clean way, then you would have to replace the standard validation callback with a copy of the function changing the reference to the new location of the quantity field.
 
 Rendering the price field and adding it to the form happens over here:
 
-{% highlight php %}
+```php
 <?php
 $content = field_view_field('commerce_product', $product, $product_field_name,
 $reference_view_mode, $langcode);
@@ -185,17 +185,17 @@ $form['pricing']['price'] = array(
   '#markup' => $output,
 );
 ?>
-{% endhighlight %}
+```
 
 Done right, the $classes variable should contain all the information necessary to render the exact same HTML context as the regular commerce price field would have. This is necessary since the AJAX javascript relies on those. I used the #prefix and #suffix properties to add the containing div's. I also added the × operator to the #prefix.
 
-{% highlight php %}
+```php
 <?php
 $form['pricing']['price']['#prefix'] = '<span class="price-operator">&times;</span>
   <div class="' . implode(' ', $classes) . '">';
 $form['pricing']['price']['#suffix'] = '</div>';
 ?>
-{% endhighlight %}
+```
 
 ## Wrap up
 
