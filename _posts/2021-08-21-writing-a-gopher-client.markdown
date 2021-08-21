@@ -15,6 +15,8 @@ $ curl gopher://circumlunar.space
 $ curl gopher://dimension.sh
 ```
 
+Or you could use a [proxy server](https://gopher.floodgap.com/gopher/gw?a=gopher%3A%2F%2Fgopher.floodgap.com%3A70) which allows you to navigate the Gopherspace over HTTPS. Or you could add support back to your browser using one of the extensions maintained by the [Overbite project](https://gopher.floodgap.com/overbite/).
+
 Gopher is a precursor to the Web. It's hypertext modeled as menus which contain lists of links to binary files, text files and other menus, all of which residing on the local server or a remote server. Navigating through menus, you essentially browse from one server to the next through this interlinked web of pages. The difference with the Web is that there are almost no moving parts. No markup, no styles, no media. The lithe plain text nature of Gopherspace is a breathe of fresh air compared to the mainstream Web.
 
 Rather then using [Lynx](https://lynx.browser.org/) or other, existing browsers, building and dogfooding my own Gopher client has been really great fun so far. It's been a long while since I started a personal coding project, and so this is clearly an awesome fit for me.
