@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Writing a Gopher client"
-date:   2021-07-28
+date:   2021-08-21
 categories: gopher smolweb
 render_with_liquid: false
 ---
