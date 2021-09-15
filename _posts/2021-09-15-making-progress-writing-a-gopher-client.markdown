@@ -5,7 +5,7 @@ date:   2021-09-15
 categories: golang
 render_with_liquid: false
 ---
-Late last month, I had hit that point where the architecture of my Gopher client was really bugging me down. Implementing a search form modal, for sending queries to search servers like Veronica-2, turned out to be really painful. I had kind of shied away from looking at other browsers like Amfora because I didn't want to make a straight up clone of an existing application.
+Late last month, I had hit that point where the architecture of my Gopher client was really bugging me down. Implementing a search form modal, for sending queries to search servers like Veronica-2, turned out to be really painful. I had kind of shied away from looking at other browsers like [Amfora](https://github.com/makeworld-the-better-one/amfora) because I didn't want to make a straight up clone of an existing application.
 
 Since this was my very first application with a somewhat complex terminal user interface, I caved and decided to dig into Amfora anyway. Turned out I was overcomplicating things, trying to do way too much with structs and struct methods where just regular functions sufficed.
 
