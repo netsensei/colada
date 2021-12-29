@@ -34,15 +34,13 @@ My initial use case was building a storage solution for a growing, amorphous blo
 
 And so, the NUC has been sitting powered down on my desk for the majority of the past year. I'm currently taking time to clean out the files I want to archive first.
 
-Meanwhile, I'm considering how to setup the NUC in a way to act as a NAS with some power features. I'm thinking about [PhotoPrism](https://photoprism.app/), [Syncthing](https://syncthing.net/) and [Rclone](https://rclone.org/). The one thing I'm missing is a workflow orchestrator which does some processing of files I upload to the NUC. I'm currently eyeing [temporal](https://temporal.io/) which I need to try out first.
+Meanwhile, I'm considering how to setup the NUC in a way to act as a NAS with some power features. I'm thinking about installing [PhotoPrism](https://photoprism.app/), [Syncthing](https://syncthing.net/) and [Rclone](https://rclone.org/). The one thing I'm missing is a workflow orchestrator which does some processing of files I upload to the NUC. I'm currently eyeing [temporal](https://temporal.io/) which I need to try out first.
 
 **This blog**
 
 I rebooted this blog. It was a nice project to do over Easter. It didn't take that long to chuck out the old code, upgrade Jekyll and give the site a new theme. Doing so also helped me write a bit more on here. Not as much as I liked, but a lot more then I did before. I hope to continue that in 2022.
 
-When it comes to bloggin, my [lifelog](https://www.netsensei.be/) saw very few updates in 2021. In august, I [wrote](https://www.colada.be/on-moving-away-from-wordpress.html) about the pain of maintaining a installation and the complexity that has been added over the years to the overall authoring experience.
-
-At this point, I'm considering migrating the entire thing towards a static site generator like [Hugo](https://gohugo.io/).
+By contrast, my [lifelog](https://www.netsensei.be/) saw very few updates in 2021. In august, I [wrote](https://www.colada.be/on-moving-away-from-wordpress.html) about the pain of maintaining a installation and the complexity that has been added over the years to the overall authoring experience. At this point, I'm considering migrating the entire thing towards a static site generator like [Hugo](https://gohugo.io/).
 
 
 Writing all of this down, I'm surprised about how much I still managed to accomplish in 2021. At any rate, I hope to find more focus and move these personal projects forward in 2022. And share my experiences with you, dear reader, on this blog.
