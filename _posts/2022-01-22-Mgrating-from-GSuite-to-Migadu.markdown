@@ -20,7 +20,7 @@ at least 12O EUR a year to do just that is a non-starter.
 
 So, I'm looking at migrating towards another email provider.
 
-# Migadu
+## Migadu
 
 There's no shortage of online mail providers. Protonmail, Fastmail, Posteo.io,... There's plenty to choose from.
 I took a cursory glance at them but I still felt they were expensive coming from "free as in free beer". These are
@@ -48,7 +48,7 @@ Getting started was really easy:
 4. Let Migadu pick up and verify the DNS changes.
 5. Create a new mailbox in Migadu under the domain `colada.be`.
 
-# Migrating mails
+## Migrating mails
 
 This is the non-trivial part. How do you transfer a mailbox from one provider to the next? I don't want to lose any data.
 I started by moving a mailbox with some 14.500 messages from Google to GSuite. [Migadu recommends](https://www.migadu.com/guides/imapsync/)
@@ -115,7 +115,7 @@ in a separate shell script and do something like this:
 $ ./migrate.sh >> /tmp/migadu.txt 2>&1 &
 ```
 
-# The benefit of owning your personal domain
+## The benefit of owning your personal domain
 
 The real take-away here is the clear benefit of hosting your mailboxes under a domain you own. The entire process of moving away from Google only
 took so long. And if I end up not being happy with Migadu, I can just pick up everything and move to somewhere else. Migadu itself uses this freedom
