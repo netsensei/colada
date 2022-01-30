@@ -48,7 +48,7 @@ lifting for us.
 
 Here's an example `docker-compose.yml` file:
 
-```yml
+```yaml
 version: "3.9"
 
 services:
