@@ -91,7 +91,7 @@ You could use a `bind mount` in each container to mount the same directory in ea
 I chose to do it the fancy way by defining a single named volume separately, and then referring
 to it from the container configuration:
 
-```yml
+```yaml
 volumes:
     app:
         driver_opts:
@@ -151,7 +151,7 @@ CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile
 
 Finally, there's the `Caddyfile` itself which remains extremely terse:
 
-```txt
+```bash
 :8080 {
 	# Set this path to your site's directory.
 	root * /var/www/html
