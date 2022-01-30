@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Caddym PHP and Docker"
+title:  "Caddy, PHP and Docker"
 date:   2022-01-30
 render_with_liquid: false
 ---
