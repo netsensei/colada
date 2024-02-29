@@ -1,0 +1,43 @@
+<script type="application/ld+json" id="me">
+    {
+        "@context": {
+            "foaf":"http://xmlns.com/foaf/0.1/",
+            "xsd": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "ex": "https://example.org/",
+            "birthPlace": {
+              "@id": "https://schema.org/birthPlace",
+              "@type": "@id"
+            }
+        },
+        "@id": "https://colada.be/#me",
+        "@type": "foaf:Person",
+        "foaf:name": {
+            "@value": "Matthias Vandermaesen",
+            "@type": "xsd:string"
+        },
+        "foaf:nick": {
+            "@value": "netsensei",
+            "@type": "xsd:string"
+        },
+        "foaf:img": {
+            "@id": "https://www.colada.be/assets/kopje.jpg"
+        },
+        "foaf:weblog": {
+            "@value": "https://www.netsensei.be"
+        },
+        "foaf:age": {
+            "@value": "42",
+            "@type": "xsd:decimal"
+        },
+        "birthPlace": "https://www.wikidata.org/wiki/Q1296",
+        "foaf:workplaceHomepage": "https://lib.ugent.be",
+        "ex:studiesWith": [
+            {
+                "foaf:name": "Nicolas Steenlant"
+            },
+            {
+                "foaf:name": "Steven Rogge"
+            }
+        ]
+    }
+</script>
