@@ -5,11 +5,9 @@ layout: default
 <section class="introduction mb-3">
   <h2>Hi!</h2>
 
-  <p class="lead">I'm <a href="/about.html">Matthias Vandermaesen</a>. I'm a software architect with a penchant
+  <p class="lead">I'm <a href="/about.html">Matthias Vandermaesen</a>. I'm a software developer with a penchant
   for Digital Culture, Open Source and the Open Web. I document my digital life on this website.
-  I share code on <a href="https://github.com/netsensei">Github</a> and I toot from time to time at <a href="https://mastodon.social">@netsensei@mastodon.social</a>.
-
-</p>
+  I share code on <a href="https://github.com/netsensei">Github</a> and I toot from time to time at <a href="https://mastodon.social/@netsensei">@netsensei@mastodon.social</a>.</p>
 </section>
 
 <section class="posts-overview">
@@ -18,7 +16,6 @@ layout: default
 
   <ul class="list-unstyled">
   {% for post in paginator.posts %}
-
     <li class="list-item entry d-md-flex justify-content-md-between mb-2">
         <time class="published order-md-2" datetime="{{ post.date }}">{{ post.date | date_to_long_string }}</time>
         <span class="title d-block order-md-1">
