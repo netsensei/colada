@@ -2,41 +2,57 @@
     {
         "@context": {
             "foaf":"http://xmlns.com/foaf/0.1/",
-            "xsd": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-            "ex": "https://example.org/",
-            "birthPlace": {
-              "@id": "https://schema.org/birthPlace",
-              "@type": "@id"
-            }
+            "xsd": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
         },
         "@id": "https://colada.be/#me",
         "@type": "foaf:Person",
-        "foaf:name": {
-            "@value": "Matthias Vandermaesen",
-            "@type": "xsd:string"
-        },
-        "foaf:nick": {
-            "@value": "netsensei",
-            "@type": "xsd:string"
-        },
+        "foaf:name": "Matthias Vandermaesen",
+        "foaf:nick": "netsensei",
         "foaf:img": {
             "@id": "https://www.colada.be/assets/kopje.jpg"
         },
-        "foaf:weblog": {
-            "@value": "https://www.netsensei.be"
-        },
+        "foaf:weblog": [
+            "https://www.netsensei.be",
+            "https://www.colada.be"
+        ],
         "foaf:age": {
             "@value": "42",
             "@type": "xsd:decimal"
         },
-        "birthPlace": "https://www.wikidata.org/wiki/Q1296",
-        "foaf:workplaceHomepage": "https://lib.ugent.be",
-        "ex:studiesWith": [
+        "schema:birthPlace": {
+            "@id": "https://www.wikidata.org/wiki/Q1296"
+        },
+        "schema:sameAs": [
+            "https://viaf.org/viaf/279844188",
+            "https://orcid.org/0000-0003-4810-3554"
+        ],
+        "schema:worksFor": {
+            "@type": "schema:Organization",
+            "@id": "https://www.wikidata.org/wiki/Q1137665",
+            "schema:legalName": "Universiteit Gent",
+            "schema:url": "https://ugent.be",
+            "schema:department": {
+                "@type": "schema:department",
+                "@id": "https://www.wikidata.org/wiki/Q611001",
+                "schema:legalName": "Universiteitsbibliotheek Gent",
+                "schema:url": "https://lib.ugent.be"
+            }
+        },
+        "foaf:knows": [
             {
-                "foaf:name": "Nicolas Steenlant"
+                "@id": "https://pietercolpaert.be/#me"
             },
             {
-                "foaf:name": "Steven Rogge"
+                "@id": "https://stijnoosterlinck.github.io/#me"
+            },
+            {
+                "@id": "https://razoreater.github.io/iam/#me"
+            },
+            {
+                "@id":"https://jensdesutter.github.io/#me"
+            },
+            {
+                "@id":"https://nicovervaeck.github.io/#me"
             }
         ]
     }
