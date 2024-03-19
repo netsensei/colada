@@ -1,14 +1,15 @@
 <script type="application/ld+json" id="me">
     {
         "@context": {
-            "foaf":"http://xmlns.com/foaf/0.1/",
+            "foaf": "http://xmlns.com/foaf/0.1/",
+            "likeness": "https://www.colada.be/assets/likeness.ttl#",
             "xsd": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
         },
         "@id": "https://colada.be/#me",
         "@type": "foaf:Person",
         "foaf:name": "Matthias Vandermaesen",
         "foaf:nick": "netsensei",
-        "foaf:img": {
+        "likeness:portrayedIn": {
             "@id": "https://www.colada.be/assets/picture.ttl#matthias"
         },
         "foaf:weblog": [
