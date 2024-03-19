@@ -10,6 +10,12 @@ likeness:Portrait
     rdfs:label "Image" ;
     owl:subClassOf foaf:Image .
 
+likeness:Portraitist
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "A portraitist." ;
+    rdfs:label "Portraitist" ;
+    owl:subClassOf foaf:Agent .
+
 likeness:portrayedIn
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "A person is portrayed in this portrait." ;
@@ -31,9 +37,9 @@ likeness:title
     rdfs:label "title" ;
     rdfs:range rdfs:Literal .
 
-likeness:creator
+likeness:portrayedBy
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "The creator of the portrait" ;
     rdfs:domain likeness:Portrait ;
     rdfs:label "creator" ;
-    rdfs:range foaf:Person .
+    rdfs:range foaf:Portraitist .

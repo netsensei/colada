@@ -2,12 +2,12 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/>
 @prefix likeness: <https://www.colada.be/assets/likeness.ttl#>
 
-:marjan a foaf:Person ;
+:marjan a likeness:Portraitist ;
     foaf:name "Marjan Delaere"@nl ;
     foaf:knows <https://colada.be/#me> .
 
 :matthias a likeness:Portrait ;
     likeness:portrays <https://colada.be/#me> ;
     likeness:title "A profile picture of Matthias Vandermaesen" ;
-    likeness:creator :marjan ;
+    likeness:portrayedBy :marjan ;
     foaf:depiction <https://www.colada.be/assets/kopje.jpg> .
