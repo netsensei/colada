@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix likeness: <https://www.colada.be/assets/likeness.ttl#> .
+
+likeness:Portrait
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "An image." ;
+    rdfs:label "Image" ;
+    owl:subClassOf foaf:Image .
+
+likeness:portrayedIn
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A person is portrayed in this portrait." ;
+    rdfs:domain foaf:Person ;
+    rdfs:label: "portrayedIn" ;
+    rdfs:range likeness:Portrait .
+
+likeness:portrays
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "This portrait portrays a person." ;
+    rdfs:domain likeness:Portrait ;
+    rdfs:label "portrays" ;
+    rdfs:range foaf:Person .
+
+likeness:title
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "The title of the portrait" ;
+    rdfs:domain likeness:Portrait ;
+    rdfs:label "title" ;
+    rdfs:range rdfs:Literal .
+
+likeness:creator
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "The creator of the portrait" ;
+    rdfs:domain likeness:Portrait ;
+    rdfs:label "creator" ;
+    rdfs:range foaf:Person .
