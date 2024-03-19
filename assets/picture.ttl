@@ -1,6 +1,6 @@
-@prefix : <https://www.colada.be/assets/picture.ttl#>
-@prefix foaf: <http://xmlns.com/foaf/0.1/>
-@prefix likeness: <https://www.colada.be/assets/likeness.ttl#>
+@prefix : <https://www.colada.be/assets/picture.ttl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix likeness: <https://www.colada.be/assets/likeness.ttl#> .
 
 :marjan a likeness:Portraitist ;
     foaf:name "Marjan Delaere"@nl ;
