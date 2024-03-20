@@ -10,4 +10,4 @@
     likeness:portrays <https://colada.be/#me> ;
     likeness:title "A profile picture of Matthias Vandermaesen" ;
     likeness:portrayedBy :marjan ;
-    foaf:depiction <https://www.colada.be/assets/kopje.jpg> .
+    foaf:depiction "https://www.colada.be/assets/kopje.jpg" .
