@@ -150,7 +150,7 @@ The output using the default settings received a positive appraisal by the team.
 
 The JPG files were stored on a scratch location on the local filesystem of the VPS as a temporary file. Given the total volume of all files, it wasn't possible to keep everything on the local filesystem. Neither was this an option in terms of data safety. A local S3 storage became our primary store. All images were uploaded to a single bucket.
 
-At this point, I need to clarify how files are stored in the old image library system. Images are grouped into representations of physical items. An item can be digitally represented as one or multiple images capturing different aspects. A newspaper consists of multiple pages, an small statue consists of multiple sides. Representations are identified via an UUID. The JPEG2000 files are stored on NFS shares grouped in a directory per representation.
+At this point, I need to clarify how files are stored in the old image library system. Images are grouped into representations of physical items. An item can be digitally represented as one or multiple images capturing different aspects. A newspaper consists of multiple pages, a small statue consists of multiple sides. Representations are identified via an UUID. The JPEG2000 files are stored on NFS shares grouped in a directory per representation.
 
 The system delivers a CSV export file containing paths to the files, the UUID, item barcode, the identifier of the associated bibliographic record, and the original filename of the TIFF file. This export file serves as a base input for the entire conversion pipeline. 
 
