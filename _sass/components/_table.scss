@@ -1,0 +1,9 @@
+table {
+  @extend .table;
+}
+
+blockquote {
+    @extend .blockquote;
+    border-left: 10px solid $blue;
+    padding-left: 1rem;
+}
