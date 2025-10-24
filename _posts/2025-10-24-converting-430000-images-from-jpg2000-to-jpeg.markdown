@@ -73,7 +73,7 @@ Clearly, VIPS is a lot faster than ImageMagick. VIPS implementation makes severa
 
 VIPS uses "horizontal threading" to process an image. Internally, VIPS makes use of [threading](https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)). It creates threads per CPU core and provides a light-weight copy of the image pipeline to process. VIPS will orchestrates the execution of these pipelines to minimize the overall computation time to process the entire image. In this experiment, VIPS will use all 12 CPU cores to process a single image, while ImageMagick will just use 1 CPU core leaving the other cores idle. This explains the system clock time for VIPS being higher.
 
-Even so, the overall processing of all images still happens sequentially. So, as the VIPS process for converting a single image waits to complete, some threads are finish sooner than others leaving CPU cores idle, waiting until the next image is processed. This is where GNU parallel comes into play. This utility allows concurrent execution of processes based on the number of CPU cores available. So, changing the command from this:
+Even so, the overall processing of all images still happens sequentially. So, as a single VIPS process waits to complete, some threads associated with the process will finish sooner than others leaving individual CPU cores idle, waiting until the next VIPS process is started. This is where GNU parallel comes into play. This utility allows concurrent execution of multiple processes based on the number of CPU cores available. So, changing the command from this:
 
 ```bash
 ... xargs -n 2 vips copy
