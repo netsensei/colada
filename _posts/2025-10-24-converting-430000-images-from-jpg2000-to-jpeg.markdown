@@ -156,7 +156,7 @@ The system delivers a CSV export file containing paths to the files, the UUID, i
 
 This set can be broken down into different material types reflecting the analogue source materials present in the library's heritage collections: ephemera, photographs, plans, books, manuscripts,... Splitting the export file into batches per type allowed the team to independently review the quality of each batch.
 
-As a result, the S3 bucket was logically structured into directories into which the images are stored. At the top level, representations were grouped per material type, and files were grouped per representation using the UUID as a directory name.
+As a result, the S3 objects where logically labeled as directories and files. At the top level, representations were grouped per material type, and files were grouped per representation using the UUID as a directory name.
 
 ```
 /manuscripts/830241A2-A979-4C59-8A15-9EF5B973EB92
