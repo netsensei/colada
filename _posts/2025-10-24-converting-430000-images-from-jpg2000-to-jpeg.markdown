@@ -4,17 +4,25 @@ title:  "Converting 430.000 images from JPG2000 to JPEG"
 date:   2025-10-24
 render_with_liquid: false
 ---
-This year, the [Ghent University Library](https://lib.ugent.be) is migrating to a new library services platform. This project includes the migration of some 430.000 images from our digitized heritage collections to this new system. These images are stored in a bespoke image library solution that was used to publish these images via the [IIIF framework](https://iiif.io) via the online catalog. Moving them to the new platform allows us to present them via the [new catalog](https://lib.ugent.be).
+This year, the [Ghent University Library](https://lib.ugent.be) is migrating to a new library services platform. This project includes the migration of some 430.000 images from our digitized heritage collections to this new system. These images are stored in a bespoke image library solution that was used to publish these images using the [IIIF framework](https://iiif.io) via the online catalog. Moving them to the new platform allows us to present them on the [new catalog](https://lib.ugent.be). As these images are stored as [JPEG2000](https://en.wikipedia.org/wiki/JPEG_2000) formatted files, the question of whether or not to convert them to [JPEG](https://en.wikipedia.org/wiki/JPEG) format popped up.
 
-The images are derivative copies generated from archival copies which are separately preserved in the library's digital archive. When the derivatives were created, the JPEG2000 format was used because this image format supports [image tiling](https://training.iiif.io/iiif-online-workshop/day-two/fileformats.html) which improves the experience when viewing a large files via a IIIF viewer. However, the new system imposes constraints regarding storage usage. A reduction of the volume data turned into an important milestone. We opted to convert the files from JPEG2000 to JPEG. This was an exercise that I was tasked to complete.
+## Background
 
-Diving into this challenge, I identified these concerns:
+The University Library aims to deliver an experience that is close to or near fidelity of consulting the digital archival copy when patrons access the digital collections. For instance, the ability to "deep zoom" caters to a wide research community. At the same time, striking a balance between usability, fidelity and expenses to achieve the intended effect is a challenge that can be approached in multiple ways. Choosing an appropriate image format and compression is an important decision.
+
+The archival copies aren't directly accessible because they are separately preserved as TIFF files in the library's digital archive. Instead, derivative copies are generated. Since the library used to built and managed its own bespoke image library system, the JPEG2000 format was chosen because it supports [image tiling](https://training.iiif.io/iiif-online-workshop/day-two/fileformats.html) as well as lossless compression. This allowed the library to offer a smooth experience via IIIF that's on par with the fidelity of the archival copy However, JPEG2000 isn't well suited for either direct dissemination towards end-users, or asset creation and daily management by library staff because few devices, browsers and utility programs provide support for this format.
+
+By contrast, the JPEG format is universally supported across browsers, programs and devices, but only offers lossy compression which causes a degradation of image quality when increasingly applied. The upshot of choosing lossy over lossless compression is a smaller filesize. Additionally, as storing an ever increasing volume of data in the new platform impacts associated expenses, a reduction of the overall size of the files would help keep these in check.
+
+While considering either migrating the images as-is, or converting them to the JPEG format, the latter option was explored through extensive quality testing on a diverse sample set. It became apparent that applying a minimal amount of lossy compression did not cause a noticeable drop in terms of visual quality while keeping the original pixel dimensions of the archival copy. Because migrating to the new library services platform also significantly impacts digitization and asset management workflows, the library decided to migrate the images to the JPEG format in order to avoid accessibility issues.
+
+I was tasked to carry out this conversion before migrating the images to the new platform. This meant designing and developing a technical workflow that makes image conversion at scale possible. As we set out, we identified these concerns: 
 
 * Perform the conversion reliably within a reasonable time frame. Days, rather than weeks.
 * Avoid a reduction of fidelity / image quality as much as possible.
-* Store the converted output safely before uploading to the new system in a separate step.
+* Store the converted output safely before uploading to the new system in a separate, next step.
 
-In this blogpost, I describe how I tackled each of these concerns and share some of the lessons I learned along the way.
+In this blogpost, I describe how we tackled each of these concerns and share some of the lessons I learned along the way.
 
 ## Reliablity
 
@@ -110,7 +118,7 @@ Nonetheless, VIPS beats ImageMagick in absolute terms when it comes to conversio
 
 A key requirement was minimizing loss of quality or fidelity with respect to the original archival copy preserved as a TIFF file in the library's archive. The old system served the images via IIIF which allowed for the integration of a IIIF viewer in the library's catalog. The new solution features similar functionality, offering IIIF services.
 
-The JPEG2000 format is well suited for fast generation and tiled delivery of images to IIIF viewers, promoting a smooth user experience when zooming into the details of a high resolution image. Since reducing storage usage is a requirement, it wasn't possible to migrate the images as-is.
+The JPEG2000 format is well suited for fast generation and tiled delivery of images to IIIF viewers, promoting a smooth user experience when zooming into the details of a high resolution image. Since minimizing accessibility concerns is a requirement, it wasn't possible to migrate the images as-is.
 
 The images are the result of many years of digitization efforts in the library. The original TIFF files are preserved on archival tape via the library's digital archiving system, and therefore not readily available. The JPEG2000 files were derived from the TIFF files before archival ingest. Applying lossless compression and preserving the original image size guaranteed that the experience offered through the old IIIF service kept the same fidelity as consuming the archival copies. Replicating a similar level of fidelity in the new system was and remains a key goal.
 
@@ -300,6 +308,8 @@ I converted 430.057 images, with some 477 failures. That's a failure rate of 0.1
 The total size of the converted set of images weighs in at 2.93 TB which meets the storage requirements. The source set of JPEG2000 files consists of about 7.23 TB of data. A reduction of about 59.5% in volume was achieved.
 
 Completing the entire conversion happened across several weeks. During that time, I switched between running and re-running  conversions, tweaking the scripts where applicable, as well as attending other aspects of the project such as creating a robust workflow for uploading and importing the images with the appropriate metadata. For reference, I was able to process a batch of 95.558 images in 23 hours, with 35 failures.
+
+**November 3rd, 2025**: The introduction of this post was amended to provide more background to the library's decision towards converting the derivative copies from JPEG2000 to the JPEG format.
 
 
 [//]: # non parallel
