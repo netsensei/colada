@@ -120,7 +120,7 @@ A key requirement was minimizing loss of quality or fidelity with respect to the
 
 The JPEG2000 format is well suited for fast generation and tiled delivery of images to IIIF viewers, promoting a smooth user experience when zooming into the details of a high resolution image. Since minimizing accessibility concerns is a requirement, it wasn't possible to migrate the images as-is.
 
-The images are the result of many years of digitization efforts in the library. The original TIFF files are preserved on archival tape via the library's digital archiving system, and therefore not readily available. The JPEG2000 files were derived from the TIFF files before archival ingest. Applying lossless compression and preserving the original image size guaranteed that the experience offered through the old IIIF service kept the same fidelity as consuming the archival copies. Replicating a similar level of fidelity in the new system was and remains a key goal.
+The images are the result of many years of digitization efforts in the library. The original TIFF files are preserved on archival tape via the library's digital archiving system, and are therefore only available upon request. The JPEG2000 files were derived from the TIFF files before archival ingest. Applying lossless compression and preserving the original image size guaranteed that the experience offered through the old IIIF service kept the same fidelity as consuming the archival copies. Replicating a similar level of fidelity in the new system was and remains a key goal.
 
 By contrast, the JPEG image format is based on lossy compression. Evaluating at which level perceived quality would degrade below an acceptable standard when applying compression, was an important step in the conversion process.
 
