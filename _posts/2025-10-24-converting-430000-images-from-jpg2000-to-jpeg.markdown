@@ -55,7 +55,7 @@ Instead of processing the entire set of 430.000 images in one go, we created sub
 
 ## Performance
 
-ImageMagick is a widely used programming library in many programming languages and frameworks. It also provides a command line tool belt which allows direct manipulation of images. ImageMagick supports [JPG200 encoding and decoding](https://imagemagick.org/script/jp2.php) although that doesn't come readily out of the box. I ended up having to manual configure and install ImageMagick as well as the [OpenJPEG](https://github.com/uclouvain/openjpeg) library it depends upon, and [CMake](https://cmake.org/), a software build system necessary to compile the OpenJPEG code into a binary.
+ImageMagick is a widely used programming library in many programming languages and frameworks. It also provides a command line tool belt which allows direct manipulation of images. ImageMagick supports [JPG2000 encoding and decoding](https://imagemagick.org/script/jp2.php) although that doesn't come readily out of the box. I ended up having to manual configure and install ImageMagick as well as the [OpenJPEG](https://github.com/uclouvain/openjpeg) library it depends upon, and [CMake](https://cmake.org/), a software build system necessary to compile the OpenJPEG code into a binary.
 
 [VIPS](https://www.libvips.org/), an alternate image processing library, converts images much faster compared with ImageMagick. Moreover, libvips comes with JPEG2000 support out of the box. It's also easily installed on Alma Linux through [Remi's repository](https://rpms.remirepo.net/) on OS'es that are binary-compatible with [RHEL](https://en.wikipedia.org/wiki/Red_Hat_Enterprise_Linux).
 
