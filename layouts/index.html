@@ -1,0 +1,41 @@
+{{ define "main" }}
+<section class="introduction mb-3">
+  <h2>Hi!</h2>
+
+  <p class="lead">I'm <a href="/about.html">Matthias Vandermaesen</a>. I'm a software developer with a penchant
+  for Digital Culture, Open Source and the Open Web. I document my digital life on this website.
+  I share code on <a href="https://github.com/netsensei">Github</a> and I toot from time to time at <a href="https://mastodon.social/@netsensei">@netsensei@mastodon.social</a>.</p>
+</section>
+
+<section class="posts-overview">
+
+  <h2>Writings</h2>
+
+  {{ $posts := where .Site.RegularPages "Section" "posts" }}
+  {{ $paginator := .Paginate $posts }}
+
+  <ul class="list-unstyled">
+  {{ range $paginator.Pages }}
+    <li class="list-item entry d-md-flex justify-content-md-between mb-2">
+        <time class="published order-md-2" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2 January 2006" }}</time>
+        <span class="title d-block order-md-1">
+            <a href="{{ .RelPermalink }}" title="{{ .Title }}" class="u-url">{{ .Title }}</a>
+        </span>
+    </li>
+  {{ end }}
+  </ul>
+
+  {{ if gt $paginator.TotalPages 1 }}
+  <div class="pagination">
+    {{ if $paginator.HasPrev }}
+      <a href="{{ $paginator.Prev.URL }}">&laquo; Prev</a>
+    {{ end }}
+
+    {{ if $paginator.HasNext }}
+      <a href="{{ $paginator.Next.URL }}">Next &raquo;</a>
+    {{ end }}
+  </div>
+  {{ end }}
+
+</section>
+{{ end }}

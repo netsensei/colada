@@ -1,0 +1,19 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{ if .IsHome }}
+      <title>{{ .Site.Title }} - {{ .Site.Params.description }}</title>
+    {{ else }}
+      <title>{{ .Site.Title }} - {{ .Title }}</title>
+    {{ end }}
+
+    {{ $style := resources.Get "scss/colada.scss" | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+
+    <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "feed.xml" | absURL }}">
+
+    {{ partial "me.html" . }}
+
+</head>
