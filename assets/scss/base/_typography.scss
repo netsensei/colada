@@ -1,0 +1,17 @@
+/**
+ * Typography
+ */
+
+@font-face {
+  font-family: 'RobotoSlab-Regular';
+  src: url('/assets/fonts/RobotoSlab-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'IBMPlexMono-Regular';
+  src: url('/assets/fonts/IBMPlexMono-Regular.ttf') format('truetype');
+}
+
+// $font-family-monospace:  , SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;;
+
+$headings-font-family: "IBMPlexMono-Regular";
