@@ -36,6 +36,9 @@ disableKinds = ["taxonomy", "term", "section"]
   [services.rss]
     limit = 10
 
+[security]
+  allowContent = ['^text/html$', '^text/markdown$']
+
 [markup]
   [markup.goldmark.renderer]
     unsafe = true
