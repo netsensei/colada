@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Where should periodic jobs run: the orchestrator or the container?"
-date:   2026-07-06 08:00:00
+date:   2026-07-06 07:00:00
 categories: Docker
 comments: false
 slug: where-should-periodic-jobs-run
