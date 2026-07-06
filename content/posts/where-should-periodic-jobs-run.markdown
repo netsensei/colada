@@ -193,3 +193,5 @@ the job you're trying to run with a heartbeat towards external monitoring (e.g. 
 allows you to catch silently failing job runs. Of course, you want to ship the logs
 themselves to an external aggregator since even long-lived containers are still at
 heart ephemeral.
+
+*Note: Claude Opus 4.8 assisted during research and editing of this blogpost.*
