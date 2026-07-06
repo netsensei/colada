@@ -109,10 +109,8 @@ A close contender is [yacron](https://github.com/gjcarneiro/yacron). It's Python
 offer built-in overlap protection as well as reporting via various channels like e-mail, Slack, and so on. Do note that the
 original project is no longer maintained; a [yacron2](https://github.com/ptweezy/yacron2) fork picks up where it left off.
 
-I ended up picking supercronic since that ticks all of the above boxes. It's worth being clear about
-what it doesn't do: supercronic won't protect against overlap or recover missed runs. For my
-once-an-hour, idempotent job that's an acceptable trade-off, but a job that must never overlap would
-be a reason to reach for yacron instead.
+I ended up picking supercronic since that ticks all of the above boxes. Still, it's worth being mindful about what supercronic doesn't offer: it won't protect against overlap or recover missed runs. For a
+once-an-hour, idempotent job that's an acceptable trade-off, but yacron would be a better fit for a job that must never overlap.
 
 Installation is fairly easy. The first step is copying the relevant install steps into your
 `Dockerfile`:
