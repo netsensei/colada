@@ -64,7 +64,7 @@ with several major limitations.
   stop as well. The only option is restarting the container.
 * There is no graceful shutdown. Running as PID 1, the loop doesn't trap `SIGTERM` or forward it
   to the child process. When the orchestrator stops the container, the job gets killed abruptly, mid-run.
-* There is no protection against overlap, no logging, and no missed-run handling.
+* There is no protection against overlap, no logging, and no missed-run handling. You could reach for `flock -n`, but it's an advisory lock local to only one container.
 * You can only run one job per loop, so it's not possible to define multiple schedules like cron.
 
 It's tempting to try to solve these by adding to the script. Sometimes, that might be 
