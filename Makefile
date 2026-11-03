@@ -20,9 +20,10 @@ build: tools
 	chmod -R u=rwX,go=rX public
 
 # Needs the hetzner WireGuard tunnel. The key only allows write-only rsync
-# into /var/www/colada.be, hence the empty target path.
+# into /var/www/colada.be, hence the empty target path. IdentitiesOnly stops
+# ssh from offering the agent's other keys first, which trips MaxAuthTries.
 deploy: build
-	rsync -rlptz --delete -e "ssh -i $(DEPLOY_KEY)" public/ $(DEPLOY_HOST):
+	rsync -rlptz --delete -e "ssh -i $(DEPLOY_KEY) -o IdentitiesOnly=yes" public/ $(DEPLOY_HOST):
 
 serve: tools
 	$(HUGO) server --source .
