@@ -18,6 +18,7 @@ _site
 public
 resources
 .hugo_build.lock
+.tools
 
 # Node stuff
 .grunt

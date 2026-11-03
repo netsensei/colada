@@ -6,30 +6,16 @@
 
 This is the repository for [colada.be](http://www.colada.be), my tech blog.
 
-### Prerequisites
+### Setup
 
-To setup this project locally, you will need to have these installed:
+Built with [Hugo](https://gohugo.io) (extended), pinned in the `Makefile`.
+`make tools` downloads it into `.tools/`; nothing gets installed system-wide.
 
-- [Ruby](https://www.ruby-lang.org/en/)
-- [Jekyll](http://jekyllrb.com)
+- `make serve`: run the site locally at http://localhost:1313.
+- `make build`: build the site into `public/`.
 
-### Installation & setup
+### Deploying
 
-Pre-requisites:
-
-Ruby 2.7.7. Install with `chruby` and `ruby-install`:
-
-```
-brew install chruby ruby-install xz
-ruby-install ruby-2.7.7
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-chruby ruby-2.7.7
-```
-
-Then:
-
-1. Clone this repository.
-2. Run `bundle install` from the root of the project to install dependencies.
-3. Run `bundle exec jekyll serve` from the root of the project.
-4. Point your browser to 127.0.0.1:4000 to see the website.
+`make deploy` builds the site and rsyncs `public/` to the server as
+`deploy-colada`. It needs the `hetzner` WireGuard tunnel and the
+`~/.ssh/id_deploy_colada_be` key. The GitHub Action only builds.
