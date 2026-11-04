@@ -7,23 +7,25 @@ HUGO  := $(TOOLS)/hugo
 DEPLOY_KEY  := ~/.ssh/id_deploy_colada_be
 DEPLOY_HOST := deploy-colada@10.10.0.1
 
-.PHONY: tools build deploy serve
+.PHONY: tools build deploy serve check-rsync
 
 tools: $(HUGO)
 
 # Start from an empty public/, so stale files never get deployed.
-# Permissions (directories 755, files 644) are set here because macOS's
-# openrsync has no --chmod; rsync -p carries them over to the server.
 build: tools
 	rm -rf public
 	$(HUGO) --source .
-	chmod -R u=rwX,go=rX public
+
+# macOS's own rsync is openrsync, which rejects or silently ignores --chmod.
+check-rsync:
+	@rsync --version | grep -qE '^rsync +version [3-9]' || { echo "Needs rsync 3 or newer: brew install rsync"; exit 1; }
 
 # Needs the hetzner WireGuard tunnel. The key only allows write-only rsync
 # into /var/www/colada.be, hence the empty target path. IdentitiesOnly stops
 # ssh from offering the agent's other keys first, which trips MaxAuthTries.
-deploy: build
-	rsync -rlptz --delete -e "ssh -i $(DEPLOY_KEY) -o IdentitiesOnly=yes" public/ $(DEPLOY_HOST):
+# Directories 755 and files 644 on the server, whatever they are locally.
+deploy: check-rsync build
+	rsync -rlptz --delete --chmod=D755,F644 -e "ssh -i $(DEPLOY_KEY) -o IdentitiesOnly=yes" public/ $(DEPLOY_HOST):
 
 serve: tools
 	$(HUGO) server --source .
