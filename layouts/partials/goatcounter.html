@@ -1,0 +1,11 @@
+{{- /*
+  GoatCounter pixel: counts the page (path, title), country and browser/OS
+  on our own GoatCounter, without JavaScript and without cookies. Not on the
+  404 page, and not under `hugo server`. See docs/plans/visitor-statistics.md
+  in the hetzner repo.
+*/ -}}
+{{- with site.Params.countURL -}}
+{{- if and (not hugo.IsServer) (ne $.Kind "404") }}
+<img src="{{ . }}?p={{ $.RelPermalink }}&t={{ $.Title }}" alt="" width="1" height="1" hidden referrerpolicy="no-referrer">
+{{- end -}}
+{{- end -}}

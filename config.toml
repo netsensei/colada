@@ -18,6 +18,8 @@ disableKinds = ["taxonomy", "term", "section"]
 
 [params]
   description = "Dispatches from my digital life."
+  # GoatCounter's pixel (layouts/partials/goatcounter.html).
+  countURL = "https://count.colada.be/count"
 
 [permalinks]
   posts = "/:slug"
